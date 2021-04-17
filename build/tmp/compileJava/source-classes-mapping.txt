@@ -1,0 +1,10 @@
+main/Panel.java
+ main.Panel
+society/Woman.java
+ society.Woman
+society/Men.java
+ society.Men
+society/Human.java
+ society.Human
+main/Screen.java
+ main.Screen
