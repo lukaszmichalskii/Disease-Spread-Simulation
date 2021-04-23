@@ -2,11 +2,11 @@ main/Screen.java
  main.Screen
 tools/Vector.java
  tools.Vector
-society/Human.java
- society.Human
 main/Panel.java
  main.Panel
 society/Woman.java
  society.Woman
 society/Men.java
  society.Men
+society/Human.java
+ society.Human

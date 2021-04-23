@@ -45,7 +45,36 @@ public abstract class Human {
      */
     public void paint(Graphics graphics){
         graphics.setColor(Color.GRAY);
+
+        edges();
         graphics.fillOval((int) position.x, (int) position.y, 7, 7);
     };
 
+    /**
+     * Method responsible for controlling whether objects do not go beyond the designated area
+     */
+    public void edges() {
+        
+        if (checkX())
+            velocity.x *= -1;
+
+        if (checkY())
+            velocity.y *= -1;
+    }
+
+    /**
+     * Method check if horizontal coordinate of object position is in designated area
+     * @return statement of condition being in designated area (horizontal)
+     */
+    public boolean checkX() {
+        return position.x < 0 || position.x > WIN_WIDTH;
+    }
+
+    /**
+     * Method check if vertical coordinate of object position is in designated area
+     * @return statement of condition being in designated area (vertical)
+     */
+    public boolean checkY() {
+        return position.y < 0 || position.y > WIN_HEIGHT;
+    }
 }

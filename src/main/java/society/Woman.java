@@ -2,8 +2,6 @@ package society;
 
 import java.awt.*;
 
-import static main.Screen.WIN_HEIGHT;
-import static main.Screen.WIN_WIDTH;
 
 /**
  * Woman class is subclass of Human and defines an object perceived as a female
@@ -27,13 +25,7 @@ public class Woman extends Human{
         graphics.setColor(Color.CYAN);
 
         position.add(velocity);
-
-        if (position.x < 0 || position.x > WIN_WIDTH) {
-            velocity.x *= -1;
-        }
-        if (position.y < 0 || position.y > WIN_HEIGHT) {
-            velocity.y *= -1;
-        }
+        edges();
 
         graphics.fillOval((int)position.x, (int)position.y, 7, 7);
     }
