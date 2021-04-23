@@ -1,14 +1,12 @@
 main/Panel.java
  main.Panel
+tools/Vector.java
+ tools.Vector
 society/Woman.java
  society.Woman
 society/Men.java
  society.Men
-tools/Vector.java
- tools.Vector
 society/Human.java
  society.Human
-main/Main.java
- main.Main
 main/Screen.java
  main.Screen

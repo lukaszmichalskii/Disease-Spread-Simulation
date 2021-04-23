@@ -7,8 +7,8 @@ import javax.swing.*;
  * @author Lukasz Michalski
  */
 public class Screen extends JFrame {
-    private final int WIN_WIDTH = 1280;
-    private final int WIN_HEIGHT = 720;
+    public static final int WIN_WIDTH = 1280;
+    public static final int WIN_HEIGHT = 720;
 
     /**
      * Default constructor
@@ -24,6 +24,10 @@ public class Screen extends JFrame {
         this.add(panel);
     }
 
+    /**
+     * Main method of simulation
+     * @param args
+     */
     public static void main(String[] args) {
         Screen screen = new Screen();
     }

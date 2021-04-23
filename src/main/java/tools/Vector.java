@@ -5,7 +5,8 @@ package tools;
  * @author Lukasz Michalski
  */
 public class Vector {
-    double x, y;
+
+    public double x, y;
 
     /**
      * Default constructor
