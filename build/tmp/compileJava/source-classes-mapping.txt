@@ -1,5 +1,7 @@
 main/Panel.java
  main.Panel
+tools/Vector.java
+ tools.Vector
 society/Woman.java
  society.Woman
 society/Men.java
