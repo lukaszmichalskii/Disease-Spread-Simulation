@@ -6,6 +6,8 @@ import society.Woman;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 /**
@@ -13,7 +15,7 @@ import java.util.ArrayList;
  * Responsible for render objects on map, their movement, behavior etc.
  * @author Lukasz Michalski
  */
-public class Panel extends JPanel {
+public class Panel extends JPanel implements ActionListener {
 
     public static final int POPULATION = 100;
     ArrayList<Human> people = new ArrayList<>();
@@ -29,6 +31,9 @@ public class Panel extends JPanel {
                 people.add(new Men());
             people.add(new Woman());
         }
+
+        Timer timer = new Timer(12, this);
+        timer.start();
     }
 
     /**
@@ -40,5 +45,10 @@ public class Panel extends JPanel {
         for (Human human: people) {
             human.paint(graphics);
         }
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        repaint();
     }
 }

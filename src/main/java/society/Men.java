@@ -2,6 +2,9 @@ package society;
 
 import java.awt.*;
 
+import static main.Screen.WIN_HEIGHT;
+import static main.Screen.WIN_WIDTH;
+
 /**
  * Men class is subclass of Human and defines an object perceived as a male
  * @author Lukasz Michalski
@@ -22,6 +25,9 @@ public class Men extends Human{
     @Override
     public void paint(Graphics graphics) {
         graphics.setColor(Color.BLUE);
+
+        position.add(velocity);
+
         graphics.fillOval((int)position.x, (int)position.y, 7, 7);
     }
 }

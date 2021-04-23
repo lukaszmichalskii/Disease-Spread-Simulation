@@ -20,8 +20,8 @@ public abstract class Human {
      * Default constructor.
      */
     public Human() {
-        double coordinate_x = Math.random() * WIN_WIDTH - 15;
-        double coordinate_y = Math.random() * WIN_HEIGHT - 45;
+        double coordinate_x = Math.random() * WIN_WIDTH;
+        double coordinate_y = Math.random() * WIN_HEIGHT;
         position = new Vector(coordinate_x, coordinate_y);
 
         double velocity_x = Math.random() * (10 + 1) +- 5;
@@ -45,7 +45,7 @@ public abstract class Human {
      */
     public void paint(Graphics graphics){
         graphics.setColor(Color.GRAY);
-        graphics.fillOval((int) position.x, (int) position.y, 10, 10);
+        graphics.fillOval((int) position.x, (int) position.y, 7, 7);
     };
 
 }
