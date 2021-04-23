@@ -28,6 +28,13 @@ public class Men extends Human{
 
         position.add(velocity);
 
+        if (position.x < 0 || position.x > WIN_WIDTH) {
+            velocity.x *= -1;
+        }
+        if (position.y < 0 || position.y > WIN_HEIGHT) {
+            velocity.y *= -1;
+        }
+
         graphics.fillOval((int)position.x, (int)position.y, 7, 7);
     }
 }
