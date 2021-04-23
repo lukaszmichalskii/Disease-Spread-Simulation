@@ -23,10 +23,8 @@ public class Men extends Human{
     @Override
     public void paint(Graphics graphics) {
         graphics.setColor(Color.BLUE);
+        super.paint(graphics);
 
-        position.add(velocity);
-        edges();
-
-        graphics.fillOval((int)position.x, (int)position.y, 7, 7);
+        graphics.fillOval((int)position.x, (int)position.y, 8, 8);
     }
 }

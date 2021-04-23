@@ -17,16 +17,14 @@ public class Woman extends Human{
     }
 
     /**
-     * Method draws the recognition symbol of a class instance
+     * Method draws the recognition symbol/color of a class instance
      * @param graphics see <a href="https://docs.oracle.com/javase/7/docs/api/java/awt/Graphics.html">Class Graphics</a>
      */
     @Override
     public void paint(Graphics graphics) {
         graphics.setColor(Color.CYAN);
+        super.paint(graphics);
 
-        position.add(velocity);
-        edges();
-
-        graphics.fillOval((int)position.x, (int)position.y, 7, 7);
+        graphics.fillOval((int)position.x, (int)position.y, 8, 8);
     }
 }
