@@ -18,6 +18,7 @@ public abstract class Human {
     protected Integer resistance;
     protected final Integer MAX_RESISTANCE = 10;
     protected boolean isInfected = false;
+    protected int healthStatus; //0 - never sick, 1 - infected, 2 - passed the disease, 3 - dead
     protected Double recoveryTime;
 
     /**
@@ -29,8 +30,8 @@ public abstract class Human {
         double coordinate_y = Math.random() * WIN_HEIGHT;
         position = new Vector(coordinate_x, coordinate_y);
 
-        double velocity_x = Math.random() * (10 + 1) +- 5;
-        double velocity_y = Math.random() * (10 + 1) +- 5;
+        double velocity_x = Math.random() * (5 + 1) +- 2;
+        double velocity_y = Math.random() * (5 + 1) +- 2;
         velocity = new Vector(velocity_x, velocity_y);
 
         resistance = (int)(Math.random() * MAX_RESISTANCE);
@@ -38,7 +39,7 @@ public abstract class Human {
 
         //Set how much of society is sick
         if (Math.random() < 0.08)
-            isInfected = true;
+            healthStatus = 1;
     }
 
     /**
@@ -56,14 +57,35 @@ public abstract class Human {
      * @param graphics see <a href="https://docs.oracle.com/javase/7/docs/api/java/awt/Graphics.html">Class Graphics</a>
      */
     public void paint(Graphics graphics){
+        switch (healthStatus) {
+            case 0 -> graphics.setColor(Color.GRAY);
+            case 1 -> graphics.setColor(Color.RED);
+            case 2 -> graphics.setColor(Color.GREEN);
+            case 3 -> graphics.setColor(Color.BLACK);
+        }
 
-        if (isInfected)
-            graphics.setColor(Color.RED);
+        if (healthStatus == 1 && resistance <= 3){
+            recoveryTime -= 32;
+            if (recoveryTime <= 0) {
+                velocity.reset();
+                healthStatus = 3;
+            }
+        }
 
-        if(isInfected == true) {
+        else if (healthStatus == 1 && resistance >= 8){
+            recoveryTime -= 32;
+            if (recoveryTime <= 0){
+                healthStatus = 2;
+            }
+
+        }
+        else if (healthStatus == 1 && resistance < 8 && resistance > 3){
+            velocity.div(1.001);
             recoveryTime -= 16;
-            if (recoveryTime <= 0)
-                isInfected = false;
+            if (recoveryTime <= 0){
+                velocity.mult(2);
+                healthStatus = 2;
+            }
         }
 
         position.add(velocity);
@@ -75,11 +97,11 @@ public abstract class Human {
         Rectangle human2 = new Rectangle((int)this.position.x, (int)this.position.y, 10, 10);
 
         if (human1.intersects(human2)) {
-            if (this.isInfected == true && human.isInfected == false)
-                human.isInfected = true;
+            if (this.healthStatus == 1 && human.healthStatus == 0)
+                human.healthStatus = 1;
 
-            else if (this.isInfected == false && human.isInfected == true)
-                this.isInfected = true;
+            else if (this.healthStatus == 0 && human.healthStatus == 1)
+                this.healthStatus = 1;
         }
     }
 

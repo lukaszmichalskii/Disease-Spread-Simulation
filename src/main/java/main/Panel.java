@@ -32,7 +32,7 @@ public class Panel extends JPanel implements ActionListener {
             people.add(new Woman());
         }
 
-        Timer timer = new Timer(12, this);
+        Timer timer = new Timer(1, this);
         timer.start();
     }
 

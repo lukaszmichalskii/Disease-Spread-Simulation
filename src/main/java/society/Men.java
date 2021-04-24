@@ -22,7 +22,6 @@ public class Men extends Human{
      */
     @Override
     public void paint(Graphics graphics) {
-        graphics.setColor(Color.BLUE);
         super.paint(graphics);
 
         graphics.fillOval((int)position.x, (int)position.y, 8, 8);

@@ -34,4 +34,24 @@ public class Vector {
         x += vector.x;
         y += vector.y;
     }
+
+    public void sub(Vector vector) {
+        x -= vector.x;
+        y -= vector.y;
+    }
+
+    public void mult(double value) {
+        x *= value;
+        y *= value;
+    }
+
+    public void div(double value){
+        x /= value;
+        y /= value;
+    }
+
+    public void reset() {
+        x = 0;
+        y = 0;
+    }
 }
