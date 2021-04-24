@@ -45,6 +45,10 @@ public class Panel extends JPanel implements ActionListener {
         for (Human human: people) {
             human.paint(graphics);
         }
+
+        for (int i = 0; i < people.size(); i++)
+            for (int j = i+1; j < people.size(); j++)
+                people.get(j).collision(people.get(i));
     }
 
     @Override

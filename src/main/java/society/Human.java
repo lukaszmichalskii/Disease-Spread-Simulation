@@ -64,6 +64,19 @@ public abstract class Human {
         edges();
     };
 
+    public void collision(Human human) {
+        Rectangle human1 = new Rectangle((int)human.position.x, (int)human.position.y, 10, 10);
+        Rectangle human2 = new Rectangle((int)this.position.x, (int)this.position.y, 10, 10);
+
+        if (human1.intersects(human2)) {
+            if (this.isInfected == true && human.isInfected == false)
+                human.isInfected = true;
+
+            else if (this.isInfected == false && human.isInfected == true)
+                this.isInfected = true;
+        }
+    }
+
     /**
      * Method responsible for controlling whether objects do not go beyond the designated area
      */
