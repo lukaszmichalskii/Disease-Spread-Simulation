@@ -25,4 +25,13 @@ public class Vector {
         this.x = x;
         this.y = y;
     }
+
+    /**
+     * Add method responsible for adding one vector object to another
+     * @param vector
+     */
+    public void add(Vector vector) {
+        x += vector.x;
+        y += vector.y;
+    }
 }
