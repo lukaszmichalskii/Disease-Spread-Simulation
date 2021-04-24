@@ -60,6 +60,12 @@ public abstract class Human {
         if (isInfected)
             graphics.setColor(Color.RED);
 
+        if(isInfected == true) {
+            recoveryTime -= 16;
+            if (recoveryTime <= 0)
+                isInfected = false;
+        }
+
         position.add(velocity);
         edges();
     };
