@@ -74,11 +74,15 @@ public abstract class Human {
             case 3 -> graphics.setColor(Color.BLACK);
         }
 
+        position.add(velocity);
         doctor.diagnose(this);
         policeman.control(this);
 
-        logic.distanceYourself(this);
-        logic.update(this);
+        if (resistance < 3) {
+            logic.distanceYourself(this);
+            logic.update(this);
+        }
+
 
     };
 
