@@ -1,5 +1,8 @@
 package tools;
 
+import static java.lang.Math.pow;
+import static java.lang.Math.sqrt;
+
 /**
  * The Vector class is the tool that creates a vector object in two-dimensional space known from linear algebra.
  * @author Lukasz Michalski
@@ -53,5 +56,21 @@ public class Vector {
     public void reset() {
         x = 0;
         y = 0;
+    }
+
+    double magnitude() {
+        return sqrt(pow(x, 2) + pow(y, 2));
+    }
+
+    public void limit(double lim) {
+        double magnitude = magnitude();
+        if (magnitude != 0 && magnitude > lim) {
+            x *= lim / magnitude;
+            y *= lim / magnitude;
+        }
+    }
+
+    public static double dist(Vector v1, Vector v2) {
+        return sqrt(pow(v1.x - v2.x, 2) + pow(v1.y - v2.y, 2));
     }
 }

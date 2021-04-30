@@ -17,14 +17,22 @@ public abstract class Human {
     protected Vector velocity;
     protected Integer resistance;
     protected final Integer MAX_RESISTANCE = 10;
-    protected boolean isInfected = false;
     protected int healthStatus; //0 - never sick, 1 - infected, 2 - passed the disease, 3 - dead
     protected Double recoveryTime;
+    public static int numInfected = 0;
+    private double maxSpeed, maxForce;
+    private Vector acceleration;
+    private Doctor doctor = new Doctor();
+    private Police policeman = new Police();
+    private Logic logic = new Logic();
 
     /**
      * Default constructor, creates a Human object with the specified but random position and velocity.
      */
     public Human() {
+        maxForce = 0.2;
+        maxSpeed = 4;
+        acceleration = new Vector();
 
         double coordinate_x = Math.random() * WIN_WIDTH;
         double coordinate_y = Math.random() * WIN_HEIGHT;
@@ -37,9 +45,11 @@ public abstract class Human {
         resistance = (int)(Math.random() * MAX_RESISTANCE);
         recoveryTime = Math.random()*(7000 - 5000 + 1) + 5000;
 
-        //Set how much of society is sick
-        if (Math.random() < 0.08)
+        //Set how much of society is sick at the very beginning
+        if (Math.random() < 0.08) {
             healthStatus = 1;
+            numInfected++;
+        }
     }
 
     /**
@@ -64,32 +74,12 @@ public abstract class Human {
             case 3 -> graphics.setColor(Color.BLACK);
         }
 
-        if (healthStatus == 1 && resistance <= 3){
-            recoveryTime -= 32;
-            if (recoveryTime <= 0) {
-                velocity.reset();
-                healthStatus = 3;
-            }
-        }
+        doctor.diagnose(this);
+        policeman.control(this);
 
-        else if (healthStatus == 1 && resistance >= 8){
-            recoveryTime -= 32;
-            if (recoveryTime <= 0){
-                healthStatus = 2;
-            }
+        logic.distanceYourself(this);
+        logic.update(this);
 
-        }
-        else if (healthStatus == 1 && resistance < 8 && resistance > 3){
-            velocity.div(1.001);
-            recoveryTime -= 16;
-            if (recoveryTime <= 0){
-                velocity.mult(2);
-                healthStatus = 2;
-            }
-        }
-
-        position.add(velocity);
-        edges();
     };
 
     public void collision(Human human) {
@@ -97,39 +87,31 @@ public abstract class Human {
         Rectangle human2 = new Rectangle((int)this.position.x, (int)this.position.y, 10, 10);
 
         if (human1.intersects(human2)) {
-            if (this.healthStatus == 1 && human.healthStatus == 0)
+            if (this.healthStatus == 1 && human.healthStatus == 0) {
                 human.healthStatus = 1;
+                numInfected++;
+            }
 
-            else if (this.healthStatus == 0 && human.healthStatus == 1)
+            else if (this.healthStatus == 0 && human.healthStatus == 1) {
                 this.healthStatus = 1;
+                numInfected++;
+            }
         }
     }
 
-    /**
-     * Method responsible for controlling whether objects do not go beyond the designated area
-     */
-    public void edges() {
-
-        if (checkX())
-            velocity.x *= -1;
-
-        if (checkY())
-            velocity.y *= -1;
+    public double getMaxSpeed() {
+        return maxSpeed;
     }
 
-    /**
-     * Method check if horizontal coordinate of object position is in designated area
-     * @return statement of condition being in designated area (horizontal)
-     */
-    public boolean checkX() {
-        return position.x < 0 || position.x > WIN_WIDTH;
+    public double getMaxForce() {
+        return maxForce;
     }
 
-    /**
-     * Method check if vertical coordinate of object position is in designated area
-     * @return statement of condition being in designated area (vertical)
-     */
-    public boolean checkY() {
-        return position.y < 0 || position.y > WIN_HEIGHT;
+    public Vector getAcceleration() {
+        return acceleration;
+    }
+
+    public void setAcceleration(Vector acceleration) {
+        this.acceleration = acceleration;
     }
 }
