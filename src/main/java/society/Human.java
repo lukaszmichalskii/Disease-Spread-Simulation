@@ -86,6 +86,10 @@ public abstract class Human {
 
     };
 
+    /**
+     * Logic related to contamination of objects
+     * @param human
+     */
     public void collision(Human human) {
         Rectangle human1 = new Rectangle((int)human.position.x, (int)human.position.y, 10, 10);
         Rectangle human2 = new Rectangle((int)this.position.x, (int)this.position.y, 10, 10);
@@ -103,18 +107,31 @@ public abstract class Human {
         }
     }
 
+    /**
+     * @return maximum speed value
+     */
     public double getMaxSpeed() {
         return maxSpeed;
     }
 
+    /**
+     * @return maximum force value
+     */
     public double getMaxForce() {
         return maxForce;
     }
 
+    /**
+     * @return content of object acceleration field
+     */
     public Vector getAcceleration() {
         return acceleration;
     }
 
+    /**
+     * Set content of object acceleration field
+     * @param acceleration is new acceleration field vector
+     */
     public void setAcceleration(Vector acceleration) {
         this.acceleration = acceleration;
     }
