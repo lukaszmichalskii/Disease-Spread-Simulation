@@ -10,6 +10,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
+import static society.Human.numInfected;
+
 /**
  * The Panel class is responsible for background of simulation.
  * Responsible for render objects on map, their movement, behavior etc.
@@ -18,7 +20,8 @@ import java.util.ArrayList;
 public class Panel extends JPanel implements ActionListener {
 
     public static final int POPULATION = 100;
-    ArrayList<Human> people = new ArrayList<>();
+    public static ArrayList<Human> people = new ArrayList<>();
+    private Timer timer;
 
     /**
      * Default constructor.
@@ -32,7 +35,7 @@ public class Panel extends JPanel implements ActionListener {
             people.add(new Woman());
         }
 
-        Timer timer = new Timer(1, this);
+        timer = new Timer(12, this);
         timer.start();
     }
 
@@ -54,5 +57,7 @@ public class Panel extends JPanel implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         repaint();
+        if (numInfected <= 0)
+            timer.stop();
     }
 }
