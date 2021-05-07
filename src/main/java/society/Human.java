@@ -15,6 +15,7 @@ public abstract class Human {
 
     protected Vector position;
     protected Vector velocity;
+    protected Vector acceleration;
     protected Integer resistance;
     protected final Integer MAX_RESISTANCE = 10;
     protected int healthStatus; //0 - never sick, 1 - infected, 2 - passed the disease, 3 - dead
@@ -22,7 +23,7 @@ public abstract class Human {
     protected Integer antibodies;
     public static int numInfected = 0;
     private double maxSpeed, maxForce;
-    private Vector acceleration;
+
     private Doctor doctor = new Doctor();
     private Police policeman = new Police();
     private Logic logic = new Logic();
@@ -32,7 +33,7 @@ public abstract class Human {
      */
     public Human() {
         maxForce = 0.2;
-        maxSpeed = 6;
+        maxSpeed = 4;
         antibodies = 0;
         acceleration = new Vector();
 
@@ -46,7 +47,7 @@ public abstract class Human {
 
         resistance = (int)(Math.random() * MAX_RESISTANCE);
         // set recovery time
-        recoveryTime = Math.random()*(7000 - 5000 + 1) + 5000;
+        doctor.recoveryTimeExpected(this);
 
         //Set how much of society is sick at the very beginning
         if (Math.random() < 0.08) {
@@ -81,10 +82,12 @@ public abstract class Human {
         doctor.diagnose(this);
         policeman.control(this);
 
-        if (resistance < 2) {
+        if (resistance <= 1) {
             logic.distanceYourself(this);
             logic.update(this);
         }
+
+        Government.introduceRestrictions(this);
     };
 
     /**

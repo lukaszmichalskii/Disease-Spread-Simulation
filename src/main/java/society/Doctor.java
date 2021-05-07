@@ -2,6 +2,9 @@ package society;
 
 import tools.Vector;
 
+import static main.Panel.POPULATION;
+import static main.Panel.changeInPopulation;
+
 /**
  * Class Doctor responds to the needs of society to define health status
  * @author Lukasz Michalski
@@ -21,6 +24,8 @@ public class Doctor {
                 human.velocity.reset();
                 human.healthStatus = 3;
                 human.numInfected--;
+
+                changeInPopulation--;
             }
         }
 
@@ -32,7 +37,7 @@ public class Doctor {
                 human.numInfected--;
 
                 antibodies(human);
-                human.antibodies -= 8;
+                human.antibodies--;
 
                 recoveryTimeExpected(human);
             }
@@ -49,7 +54,7 @@ public class Doctor {
                 human.numInfected--;
 
                 antibodies(human);
-                human.antibodies -= 32;
+                human.antibodies--;
 
                 recoveryTimeExpected(human);
             }

@@ -15,7 +15,7 @@ public class Logic {
      * @param human considered object
      * @return steering is vector which stores information about force of social distancing
      */
-    public Vector socialDistancing(Human human) {
+    public static Vector socialDistancing(Human human) {
         int perceptionRadius = 30;
         int total = 0;
         double dist;
@@ -46,7 +46,7 @@ public class Logic {
      * Defines what will be done if human realizes the danger posed by the disease
      * @param human
      */
-    public void distanceYourself(Human human) {
+    public static void distanceYourself(Human human) {
         human.setAcceleration(new Vector());
         Vector socialDistancing = socialDistancing(human);
         human.setAcceleration(socialDistancing);
@@ -56,7 +56,7 @@ public class Logic {
      * Update the human object fields
      * @param human
      */
-    public void update(Human human) {
+    public static void update(Human human) {
         human.velocity.add(human.getAcceleration());
         human.velocity.limit(human.getMaxSpeed());
     }

@@ -4,15 +4,17 @@ tools/Vector.java
  tools.Vector
 main/Panel.java
  main.Panel
-society/Police.java
- society.Police
-society/Woman.java
- society.Woman
-society/Men.java
- society.Men
 society/Doctor.java
  society.Doctor
+society/Men.java
+ society.Men
+society/Woman.java
+ society.Woman
 society/Logic.java
  society.Logic
+society/Police.java
+ society.Police
+society/Government.java
+ society.Government
 society/Human.java
  society.Human
