@@ -1,5 +1,7 @@
 package society;
 
+import tools.Vector;
+
 /**
  * Class Doctor responds to the needs of society to define health status
  * @author Lukasz Michalski
@@ -28,6 +30,11 @@ public class Doctor {
             if (human.recoveryTime <= 0){
                 human.healthStatus = 2;
                 human.numInfected--;
+
+                antibodies(human);
+                human.antibodies -= 8;
+
+                recoveryTimeExpected(human);
             }
         }
 
@@ -37,9 +44,23 @@ public class Doctor {
             human.recoveryTime -= 16;
             if (human.recoveryTime <= 0){
                 human.velocity.mult(2);
+                human.velocity.limit(human.getMaxSpeed());
                 human.healthStatus = 2;
                 human.numInfected--;
+
+                antibodies(human);
+                human.antibodies -= 32;
+
+                recoveryTimeExpected(human);
             }
         }
+    }
+
+    public void antibodies(Human human) {
+        human.antibodies = (int)Math.random()*5000;
+    }
+
+    public void recoveryTimeExpected(Human human) {
+        human.recoveryTime = Math.random()*(7000 - 5000 + 1) + 5000;
     }
 }

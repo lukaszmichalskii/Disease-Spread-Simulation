@@ -57,7 +57,6 @@ public class Logic {
      * @param human
      */
     public void update(Human human) {
-        //human.position.add(human.velocity);
         human.velocity.add(human.getAcceleration());
         human.velocity.limit(human.getMaxSpeed());
     }

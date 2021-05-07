@@ -19,7 +19,7 @@ import static society.Human.numInfected;
  */
 public class Panel extends JPanel implements ActionListener {
 
-    public static final int POPULATION = 100;
+    public static final int POPULATION = 200;
     public static ArrayList<Human> people = new ArrayList<>();
     private Timer timer;
 
