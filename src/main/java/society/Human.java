@@ -19,6 +19,7 @@ public abstract class Human {
     protected final Integer MAX_RESISTANCE = 10;
     protected int healthStatus; //0 - never sick, 1 - infected, 2 - passed the disease, 3 - dead
     protected Double recoveryTime;
+    protected Integer antibodies;
     public static int numInfected = 0;
     private double maxSpeed, maxForce;
     private Vector acceleration;
@@ -31,18 +32,20 @@ public abstract class Human {
      */
     public Human() {
         maxForce = 0.2;
-        maxSpeed = 4;
+        maxSpeed = 6;
+        antibodies = 0;
         acceleration = new Vector();
 
         double coordinate_x = Math.random() * WIN_WIDTH;
         double coordinate_y = Math.random() * WIN_HEIGHT;
         position = new Vector(coordinate_x, coordinate_y);
 
-        double velocity_x = Math.random() * (5 + 1) +- 2;
-        double velocity_y = Math.random() * (5 + 1) +- 2;
+        double velocity_x = Math.random() * (maxSpeed) +- 2;
+        double velocity_y = Math.random() * (maxSpeed) +- 2;
         velocity = new Vector(velocity_x, velocity_y);
 
         resistance = (int)(Math.random() * MAX_RESISTANCE);
+        // set recovery time
         recoveryTime = Math.random()*(7000 - 5000 + 1) + 5000;
 
         //Set how much of society is sick at the very beginning
@@ -78,12 +81,10 @@ public abstract class Human {
         doctor.diagnose(this);
         policeman.control(this);
 
-        if (resistance < 3) {
+        if (resistance < 2) {
             logic.distanceYourself(this);
             logic.update(this);
         }
-
-
     };
 
     /**
@@ -95,12 +96,12 @@ public abstract class Human {
         Rectangle human2 = new Rectangle((int)this.position.x, (int)this.position.y, 10, 10);
 
         if (human1.intersects(human2)) {
-            if (this.healthStatus == 1 && human.healthStatus == 0) {
+            if (this.healthStatus == 1 && (human.healthStatus == 0 || (human.healthStatus == 2 && human.antibodies <= 0))) {
                 human.healthStatus = 1;
                 numInfected++;
             }
 
-            else if (this.healthStatus == 0 && human.healthStatus == 1) {
+            else if (human.healthStatus == 1 && (this.healthStatus == 0 || (this.healthStatus == 2 && this.antibodies <= 0))) {
                 this.healthStatus = 1;
                 numInfected++;
             }
