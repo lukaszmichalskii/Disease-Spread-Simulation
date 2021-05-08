@@ -1,15 +1,13 @@
 package society;
 
-import tools.Vector;
-
-import static main.Panel.POPULATION;
-import static main.Panel.changeInPopulation;
-
 /**
  * Class Doctor responds to the needs of society to define health status
  * @author Lukasz Michalski
  */
 public class Doctor {
+
+    public static int numInfected = 0;
+    public static int numDead = 0;
 
     /**
      * Method diagnose object and if necessary - declare dead
@@ -23,9 +21,9 @@ public class Doctor {
             if (human.recoveryTime <= 0) {
                 human.velocity.reset();
                 human.healthStatus = 3;
-                human.numInfected--;
+                numInfected--;
 
-                changeInPopulation--;
+                numDead++;
             }
         }
 
@@ -34,7 +32,7 @@ public class Doctor {
             human.recoveryTime -= 32;
             if (human.recoveryTime <= 0){
                 human.healthStatus = 2;
-                human.numInfected--;
+                numInfected--;
 
                 antibodies(human);
                 human.antibodies--;
@@ -51,7 +49,7 @@ public class Doctor {
                 human.velocity.mult(2);
                 human.velocity.limit(human.getMaxSpeed());
                 human.healthStatus = 2;
-                human.numInfected--;
+                numInfected--;
 
                 antibodies(human);
                 human.antibodies--;

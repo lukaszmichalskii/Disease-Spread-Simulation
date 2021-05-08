@@ -1,12 +1,12 @@
 package society;
 
-import static main.Panel.changeInPopulation;
-import static society.Human.numInfected;
+import static society.Doctor.numDead;
+import static society.Doctor.numInfected;
 
 public class Government {
 
     public static void introduceRestrictions(Human human) {
-        if (numInfected > 0.4 * changeInPopulation) {
+        if (numInfected < numDead) {
             Logic.distanceYourself(human);
             Logic.update(human);
         }

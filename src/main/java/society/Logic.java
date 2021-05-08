@@ -5,7 +5,7 @@ import tools.Vector;
 import java.awt.*;
 
 import static main.Panel.people;
-import static society.Human.numInfected;
+import static society.Doctor.numInfected;
 
 /**
  * Class Logic defines decisions that can be made by the objects of society

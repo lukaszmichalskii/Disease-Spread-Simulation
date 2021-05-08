@@ -5,6 +5,7 @@ import java.awt.*;
 
 import static main.Screen.WIN_HEIGHT;
 import static main.Screen.WIN_WIDTH;
+import static society.Doctor.numInfected;
 
 /**
  * class Human is model from which other objects of society inherit.
@@ -21,7 +22,6 @@ public abstract class Human {
     protected int healthStatus; //0 - never sick, 1 - infected, 2 - passed the disease, 3 - dead
     protected Double recoveryTime;
     protected Integer antibodies;
-    public static int numInfected = 0;
     private double maxSpeed, maxForce;
 
     private Doctor doctor = new Doctor();
