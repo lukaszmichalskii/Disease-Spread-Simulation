@@ -1,18 +1,20 @@
-main/Screen.java
- main.Screen
-tools/Vector.java
- tools.Vector
 main/Panel.java
  main.Panel
-society/Police.java
- society.Police
+tools/Vector.java
+ tools.Vector
+society/Doctor.java
+ society.Doctor
+society/Government.java
+ society.Government
 society/Woman.java
  society.Woman
 society/Men.java
  society.Men
-society/Doctor.java
- society.Doctor
+society/Police.java
+ society.Police
 society/Logic.java
  society.Logic
 society/Human.java
  society.Human
+main/Screen.java
+ main.Screen

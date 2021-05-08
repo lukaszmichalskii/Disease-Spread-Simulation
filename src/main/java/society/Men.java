@@ -24,6 +24,6 @@ public class Men extends Human{
     public void paint(Graphics graphics) {
         super.paint(graphics);
 
-        graphics.fillOval((int)position.x, (int)position.y, 8, 8);
+        graphics.fillOval((int)position.x, (int)position.y, 10, 10);
     }
 }
