@@ -17,11 +17,11 @@ public abstract class Human {
     protected Vector position;
     protected Vector velocity;
     protected Vector acceleration;
-    protected Integer resistance;
-    protected final Integer MAX_RESISTANCE = 10;
+    protected int resistance;
+    protected final int MAX_RESISTANCE = 10;
     protected int healthStatus; //0 - never sick, 1 - infected, 2 - passed the disease, 3 - dead
-    protected Double recoveryTime;
-    protected Integer antibodies;
+    protected double recoveryTime;
+    protected int antibodies;
     private double maxSpeed, maxForce;
 
     private Doctor doctor = new Doctor();
@@ -88,6 +88,22 @@ public abstract class Human {
 
         Government.introduceRestrictions(this);
     };
+
+    public Vector getPosition() {
+        return position;
+    }
+
+    public int getHealthStatus() {
+        return healthStatus;
+    }
+
+    public void setHealthStatus(int healthStatus) {
+        this.healthStatus = healthStatus;
+    }
+
+    public int getAntibodies() {
+        return antibodies;
+    }
 
     /**
      * @return maximum speed value

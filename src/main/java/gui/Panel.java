@@ -1,5 +1,6 @@
 package gui;
 
+import disease.DiseaseSpreader;
 import society.Human;
 import society.Logic;
 import society.Men;
@@ -52,7 +53,7 @@ public class Panel extends JPanel implements ActionListener {
 
         for (int i = 0; i < people.size(); i++)
             for (int j = i+1; j < people.size(); j++)
-                Logic.collision(people.get(j), people.get(i));
+                DiseaseSpreader.collision(people.get(j), people.get(i));
     }
 
     @Override
