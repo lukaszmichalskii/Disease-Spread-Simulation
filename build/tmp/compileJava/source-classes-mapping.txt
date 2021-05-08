@@ -1,5 +1,5 @@
-main/Panel.java
- main.Panel
+gui/Screen.java
+ gui.Screen
 tools/Vector.java
  tools.Vector
 society/Doctor.java
@@ -8,6 +8,10 @@ society/Government.java
  society.Government
 society/Woman.java
  society.Woman
+main/SimulationRunner.java
+ main.SimulationRunner
+gui/Panel.java
+ gui.Panel
 society/Men.java
  society.Men
 society/Police.java
@@ -16,5 +20,3 @@ society/Logic.java
  society.Logic
 society/Human.java
  society.Human
-main/Screen.java
- main.Screen

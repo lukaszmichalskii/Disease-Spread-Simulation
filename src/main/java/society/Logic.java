@@ -4,14 +4,13 @@ import tools.Vector;
 
 import java.awt.*;
 
-import static main.Panel.people;
+import static gui.Panel.people;
 import static society.Doctor.numInfected;
 
 /**
  * Class Logic defines decisions that can be made by the objects of society
  */
 public class Logic {
-    private Doctor doctor = new Doctor();
 
     /**
      * Method defines the logic of social distancing behavior

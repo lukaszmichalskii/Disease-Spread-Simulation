@@ -1,4 +1,4 @@
-package main;
+package gui;
 
 import society.Human;
 import society.Logic;
@@ -12,6 +12,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 import static society.Doctor.numInfected;
+import static society.Government.POPULATION;
 
 /**
  * The Panel class is responsible for background of simulation.
@@ -20,7 +21,6 @@ import static society.Doctor.numInfected;
  */
 public class Panel extends JPanel implements ActionListener {
 
-    public static final int POPULATION = 200;
     public static ArrayList<Human> people = new ArrayList<>();
     private Timer timer;
 

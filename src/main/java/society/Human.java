@@ -3,8 +3,8 @@ package society;
 import tools.Vector;
 import java.awt.*;
 
-import static main.Screen.WIN_HEIGHT;
-import static main.Screen.WIN_WIDTH;
+import static gui.Screen.WIN_HEIGHT;
+import static gui.Screen.WIN_WIDTH;
 import static society.Doctor.numInfected;
 
 /**
@@ -26,7 +26,6 @@ public abstract class Human {
 
     private Doctor doctor = new Doctor();
     private Police policeman = new Police();
-    private Logic logic = new Logic();
 
     /**
      * Default constructor, creates a Human object with the specified but random position and velocity.
@@ -83,8 +82,8 @@ public abstract class Human {
         policeman.control(this);
 
         if (resistance <= 1) {
-            logic.distanceYourself(this);
-            logic.update(this);
+            Logic.distanceYourself(this);
+            Logic.update(this);
         }
 
         Government.introduceRestrictions(this);
