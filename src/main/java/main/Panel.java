@@ -1,6 +1,7 @@
 package main;
 
 import society.Human;
+import society.Logic;
 import society.Men;
 import society.Woman;
 
@@ -52,7 +53,7 @@ public class Panel extends JPanel implements ActionListener {
 
         for (int i = 0; i < people.size(); i++)
             for (int j = i+1; j < people.size(); j++)
-                people.get(j).collision(people.get(i));
+                Logic.collision(people.get(j), people.get(i));
     }
 
     @Override

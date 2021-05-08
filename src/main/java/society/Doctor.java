@@ -62,7 +62,7 @@ public class Doctor {
     }
 
     public void antibodies(Human human) {
-        human.antibodies = (int)Math.random()*5000;
+        human.antibodies = (int)Math.random()*10000;
     }
 
     public void recoveryTimeExpected(Human human) {

@@ -77,7 +77,7 @@ public class Vector {
      * Calculate magnitude of vector
      * @return magnitude of vector
      */
-    double magnitude() {
+    public double magnitude() {
         return sqrt(pow(x, 2) + pow(y, 2));
     }
 
