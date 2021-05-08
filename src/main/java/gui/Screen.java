@@ -1,4 +1,4 @@
-package main;
+package gui;
 
 import javax.swing.*;
 
@@ -22,13 +22,5 @@ public class Screen extends JFrame {
 
         Panel panel = new Panel();
         this.add(panel);
-    }
-
-    /**
-     * Main method of simulation
-     * @param args
-     */
-    public static void main(String[] args) {
-        Screen screen = new Screen();
     }
 }

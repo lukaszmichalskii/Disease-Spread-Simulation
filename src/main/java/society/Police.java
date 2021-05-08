@@ -1,7 +1,7 @@
 package society;
 
-import static main.Screen.WIN_HEIGHT;
-import static main.Screen.WIN_WIDTH;
+import static gui.Screen.WIN_HEIGHT;
+import static gui.Screen.WIN_WIDTH;
 
 /**
  * Class Police responsible for controlling society to stay in designated area

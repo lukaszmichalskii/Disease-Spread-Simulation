@@ -3,8 +3,9 @@ package society;
 import tools.Vector;
 import java.awt.*;
 
-import static main.Screen.WIN_HEIGHT;
-import static main.Screen.WIN_WIDTH;
+import static gui.Screen.WIN_HEIGHT;
+import static gui.Screen.WIN_WIDTH;
+import static society.Doctor.numInfected;
 
 /**
  * class Human is model from which other objects of society inherit.
@@ -16,17 +17,15 @@ public abstract class Human {
     protected Vector position;
     protected Vector velocity;
     protected Vector acceleration;
-    protected Integer resistance;
-    protected final Integer MAX_RESISTANCE = 10;
+    protected int resistance;
+    protected final int MAX_RESISTANCE = 10;
     protected int healthStatus; //0 - never sick, 1 - infected, 2 - passed the disease, 3 - dead
-    protected Double recoveryTime;
-    protected Integer antibodies;
-    public static int numInfected = 0;
+    protected double recoveryTime;
+    protected int antibodies;
     private double maxSpeed, maxForce;
 
     private Doctor doctor = new Doctor();
     private Police policeman = new Police();
-    private Logic logic = new Logic();
 
     /**
      * Default constructor, creates a Human object with the specified but random position and velocity.
@@ -83,12 +82,41 @@ public abstract class Human {
         policeman.control(this);
 
         if (resistance <= 1) {
-            logic.distanceYourself(this);
-            logic.update(this);
+            Logic.distanceYourself(this);
+            Logic.update(this);
         }
 
         Government.introduceRestrictions(this);
     };
+
+    /**
+     * @return position of human
+     */
+    public Vector getPosition() {
+        return position;
+    }
+
+    /**
+     * @return health status of human
+     */
+    public int getHealthStatus() {
+        return healthStatus;
+    }
+
+    /**
+     * Set new health status of human
+     * @param healthStatus
+     */
+    public void setHealthStatus(int healthStatus) {
+        this.healthStatus = healthStatus;
+    }
+
+    /**
+     * @return antibodies of human
+     */
+    public int getAntibodies() {
+        return antibodies;
+    }
 
     /**
      * @return maximum speed value

@@ -2,16 +2,14 @@ package society;
 
 import tools.Vector;
 
-import java.awt.*;
 
-import static main.Panel.people;
-import static society.Human.numInfected;
+import static gui.Panel.people;
 
 /**
  * Class Logic defines decisions that can be made by the objects of society
+ * @author Lukasz Michalski
  */
 public class Logic {
-    private Doctor doctor = new Doctor();
 
     /**
      * Method defines the logic of social distancing behavior
@@ -62,27 +60,5 @@ public class Logic {
     public static void update(Human human) {
         human.velocity.add(human.getAcceleration());
         human.velocity.limit(human.getMaxSpeed());
-    }
-
-    /**
-     * Logic related to contamination of objects
-     * @param human1
-     * @param human2
-     */
-    public static void collision(Human human1, Human human2) {
-        Rectangle human1Radius = new Rectangle((int)human2.position.x, (int)human2.position.y, 10, 10);
-        Rectangle human2Radius = new Rectangle((int)human1.position.x, (int)human1.position.y, 10, 10);
-
-        if (human1Radius.intersects(human2Radius)) {
-            if (human1.healthStatus == 1 && (human2.healthStatus == 0 || (human2.healthStatus == 2 && human2.antibodies <= 0))) {
-                human2.healthStatus = 1;
-                numInfected++;
-            }
-
-            else if (human2.healthStatus == 1 && (human1.healthStatus == 0 || (human1.healthStatus == 2 && human1.antibodies <= 0))) {
-                human1.healthStatus = 1;
-                numInfected++;
-            }
-        }
     }
 }

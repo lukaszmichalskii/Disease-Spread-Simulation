@@ -1,5 +1,6 @@
-package main;
+package gui;
 
+import disease.DiseaseSpreader;
 import society.Human;
 import society.Logic;
 import society.Men;
@@ -11,7 +12,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-import static society.Human.numInfected;
+import static society.Doctor.numInfected;
+import static society.Government.POPULATION;
 
 /**
  * The Panel class is responsible for background of simulation.
@@ -20,8 +22,6 @@ import static society.Human.numInfected;
  */
 public class Panel extends JPanel implements ActionListener {
 
-    public static final int POPULATION = 200;
-    public static int changeInPopulation = POPULATION;
     public static ArrayList<Human> people = new ArrayList<>();
     private Timer timer;
 
@@ -53,7 +53,7 @@ public class Panel extends JPanel implements ActionListener {
 
         for (int i = 0; i < people.size(); i++)
             for (int j = i+1; j < people.size(); j++)
-                Logic.collision(people.get(j), people.get(i));
+                DiseaseSpreader.collision(people.get(j), people.get(i));
     }
 
     @Override
