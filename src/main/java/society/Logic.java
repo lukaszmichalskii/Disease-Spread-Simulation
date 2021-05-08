@@ -7,6 +7,7 @@ import static gui.Panel.people;
 
 /**
  * Class Logic defines decisions that can be made by the objects of society
+ * @author Lukasz Michalski
  */
 public class Logic {
 

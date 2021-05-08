@@ -1,15 +1,15 @@
-main/SimulationRunner.java
- main.SimulationRunner
-tools/Vector.java
- tools.Vector
 gui/Screen.java
  gui.Screen
+tools/Vector.java
+ tools.Vector
 society/Doctor.java
  society.Doctor
 society/Police.java
  society.Police
 society/Woman.java
  society.Woman
+main/SimulationRunner.java
+ main.SimulationRunner
 society/Logic.java
  society.Logic
 society/Men.java

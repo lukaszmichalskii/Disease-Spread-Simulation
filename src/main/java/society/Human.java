@@ -89,18 +89,31 @@ public abstract class Human {
         Government.introduceRestrictions(this);
     };
 
+    /**
+     * @return position of human
+     */
     public Vector getPosition() {
         return position;
     }
 
+    /**
+     * @return health status of human
+     */
     public int getHealthStatus() {
         return healthStatus;
     }
 
+    /**
+     * Set new health status of human
+     * @param healthStatus
+     */
     public void setHealthStatus(int healthStatus) {
         this.healthStatus = healthStatus;
     }
 
+    /**
+     * @return antibodies of human
+     */
     public int getAntibodies() {
         return antibodies;
     }

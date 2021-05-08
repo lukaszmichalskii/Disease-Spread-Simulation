@@ -2,6 +2,10 @@ package main;
 
 import gui.Screen;
 
+/**
+ * Class responsible for run simulation
+ * @author Lukasz Michalski
+ */
 public class SimulationRunner {
 
     /**

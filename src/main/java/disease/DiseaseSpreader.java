@@ -6,7 +6,13 @@ import java.awt.*;
 
 import static society.Doctor.numInfected;
 
+/**
+ * Disease Spreader define the way disease spreading and how dangerous the plague is.
+ * @author Lukasz Michalski
+ */
 public class DiseaseSpreader {
+
+    public static final int DISEASE_MORALITY_INDEX = 3;
 
     /**
      * Defining the rules of the spread of plague
