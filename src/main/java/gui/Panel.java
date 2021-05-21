@@ -1,9 +1,7 @@
 package gui;
 
 import disease.DiseaseSpreader;
-import society.Human;
-import society.Men;
-import society.Woman;
+import society.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -49,6 +47,16 @@ public class Panel extends JPanel implements ActionListener {
         super.paintComponent(graphics);
         for (Human human: people) {
             human.paint(graphics);
+            Doctor.diagnose(human);
+            Police.control(human);
+
+            if (human.getResistance() <= 1) {
+                Logic.distanceYourself(human);
+                Logic.update(human);
+            }
+
+            // only when the disease becomes dangerous
+            Government.introduceRestrictions(human);
         }
 
         for (int i = 0; i < people.size(); i++)
