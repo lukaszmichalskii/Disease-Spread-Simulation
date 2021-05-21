@@ -15,6 +15,7 @@ import static society.Doctor.numInfected;
  */
 public abstract class Human {
 
+
     protected Vector position;
     protected Vector velocity;
     protected Vector acceleration;
@@ -23,10 +24,8 @@ public abstract class Human {
     protected int healthStatus; //0 - never sick, 1 - infected, 2 - passed the disease, 3 - dead
     protected double recoveryTime;
     protected int antibodies;
-    private double maxSpeed, maxForce;
 
-    private Doctor doctor = new Doctor();
-    private Police policeman = new Police();
+    private double maxSpeed, maxForce;
 
     /**
      * Default constructor, creates a Human object with the specified but random position and velocity.
@@ -47,7 +46,7 @@ public abstract class Human {
 
         resistance = (int)(Math.random() * MAX_RESISTANCE);
         // set recovery time
-        doctor.recoveryTimeExpected(this);
+        Doctor.recoveryTimeExpected(this);
 
         //Set how much of society is sick at the very beginning
         if (Math.random() < initial_numInfected) {
@@ -79,8 +78,8 @@ public abstract class Human {
         }
 
         position.add(velocity);
-        doctor.diagnose(this);
-        policeman.control(this);
+        Doctor.diagnose(this);
+        Police.control(this);
 
         if (resistance <= 1) {
             Logic.distanceYourself(this);
@@ -88,7 +87,7 @@ public abstract class Human {
         }
 
         Government.introduceRestrictions(this);
-    };
+    }
 
     /**
      * @return position of human

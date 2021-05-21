@@ -12,7 +12,7 @@ public class Police {
     /**
      * Method responsible for controlling whether objects do not go beyond the designated area
      */
-    public void control(Human human) {
+    public static void control(Human human) {
             if (checkX(human))
                 human.velocity.x *= -1;
 
@@ -24,7 +24,7 @@ public class Police {
      * Method check if horizontal coordinate of object position is in designated area
      * @return statement of condition being in designated area (horizontal)
      */
-    public boolean checkX(Human human) {
+    public static boolean checkX(Human human) {
         return human.position.x < 0 || human.position.x > WIN_WIDTH;
     }
 
@@ -32,7 +32,7 @@ public class Police {
      * Method check if vertical coordinate of object position is in designated area
      * @return statement of condition being in designated area (vertical)
      */
-    public boolean checkY(Human human) {
+    public static boolean checkY(Human human) {
         return human.position.y < 0 || human.position.y > WIN_HEIGHT;
     }
 }

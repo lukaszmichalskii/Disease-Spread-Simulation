@@ -16,11 +16,13 @@ public class Doctor {
      * Method diagnose object and if necessary - declare dead
      * @param human diagnosed/analyzed object
      */
-    public void diagnose(Human human) {
+    public static void diagnose(Human human) {
+        int fastTimeDelta = 32;
+        int normalTimeDelta = 16;
 
         // conditions of death
         if (human.healthStatus == 1 && human.resistance <= DISEASE_MORALITY_INDEX){
-            human.recoveryTime -= 32;
+            human.recoveryTime -= fastTimeDelta;
             if (human.recoveryTime <= 0) {
                 human.velocity.reset();
                 human.healthStatus = 3;
@@ -32,7 +34,7 @@ public class Doctor {
 
         // conditions for really strong people
         else if (human.healthStatus == 1 && human.resistance >= SAFE_LEVEL_IMMUNITY){
-            human.recoveryTime -= 32;
+            human.recoveryTime -= fastTimeDelta;
             if (human.recoveryTime <= 0){
                 human.healthStatus = 2;
                 numInfected--;
@@ -47,7 +49,7 @@ public class Doctor {
         // conditions for normal people
         else if (human.healthStatus == 1 && human.resistance < SAFE_LEVEL_IMMUNITY && human.resistance > DISEASE_MORALITY_INDEX){
             human.velocity.div(1.001);
-            human.recoveryTime -= 16;
+            human.recoveryTime -= normalTimeDelta;
             if (human.recoveryTime <= 0){
                 human.velocity.mult(2);
                 human.velocity.limit(human.getMaxSpeed());
@@ -64,17 +66,17 @@ public class Doctor {
 
     /**
      * Create antibodies
-     * @param human
+     * @param human the person on the test
      */
-    public void antibodies(Human human) {
+    public static void antibodies(Human human) {
         human.antibodies = (int)Math.random()*10000;
     }
 
     /**
      * Determines the time needed for recovery
-     * @param human
+     * @param human the person on the test
      */
-    public void recoveryTimeExpected(Human human) {
+    public static void recoveryTimeExpected(Human human) {
         human.recoveryTime = Math.random()*(7000 - 5000 + 1) + 5000;
     }
 }
