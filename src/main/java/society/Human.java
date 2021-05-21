@@ -3,6 +3,7 @@ package society;
 import tools.Vector;
 import java.awt.*;
 
+import static disease.DiseaseSpreader.initial_numInfected;
 import static gui.Screen.WIN_HEIGHT;
 import static gui.Screen.WIN_WIDTH;
 import static society.Doctor.numInfected;
@@ -49,7 +50,7 @@ public abstract class Human {
         doctor.recoveryTimeExpected(this);
 
         //Set how much of society is sick at the very beginning
-        if (Math.random() < 0.08) {
+        if (Math.random() < initial_numInfected) {
             healthStatus = 1;
             numInfected++;
         }

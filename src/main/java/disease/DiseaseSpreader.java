@@ -13,6 +13,8 @@ import static society.Doctor.numInfected;
 public class DiseaseSpreader {
 
     public static final int DISEASE_MORALITY_INDEX = 3;
+    public static int SAFE_LEVEL_IMMUNITY = 8;
+    public static double initial_numInfected = 0.08;
 
     /**
      * Defining the rules of the spread of plague

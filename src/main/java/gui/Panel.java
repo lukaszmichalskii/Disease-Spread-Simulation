@@ -2,7 +2,6 @@ package gui;
 
 import disease.DiseaseSpreader;
 import society.Human;
-import society.Logic;
 import society.Men;
 import society.Woman;
 
@@ -24,6 +23,7 @@ public class Panel extends JPanel implements ActionListener {
 
     public static ArrayList<Human> people = new ArrayList<>();
     private Timer timer;
+    private int delay = 12;
 
     /**
      * Default constructor.
@@ -37,7 +37,7 @@ public class Panel extends JPanel implements ActionListener {
             people.add(new Woman());
         }
 
-        timer = new Timer(12, this);
+        timer = new Timer(delay, this);
         timer.start();
     }
 

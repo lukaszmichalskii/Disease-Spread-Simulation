@@ -1,6 +1,7 @@
 package society;
 
 import static disease.DiseaseSpreader.DISEASE_MORALITY_INDEX;
+import static disease.DiseaseSpreader.SAFE_LEVEL_IMMUNITY;
 
 /**
  * Class Doctor responds to the needs of society to define health status
@@ -30,7 +31,7 @@ public class Doctor {
         }
 
         // conditions for really strong people
-        else if (human.healthStatus == 1 && human.resistance >= 8){
+        else if (human.healthStatus == 1 && human.resistance >= SAFE_LEVEL_IMMUNITY){
             human.recoveryTime -= 32;
             if (human.recoveryTime <= 0){
                 human.healthStatus = 2;
@@ -44,7 +45,7 @@ public class Doctor {
         }
 
         // conditions for normal people
-        else if (human.healthStatus == 1 && human.resistance < 8 && human.resistance > DISEASE_MORALITY_INDEX){
+        else if (human.healthStatus == 1 && human.resistance < SAFE_LEVEL_IMMUNITY && human.resistance > DISEASE_MORALITY_INDEX){
             human.velocity.div(1.001);
             human.recoveryTime -= 16;
             if (human.recoveryTime <= 0){
