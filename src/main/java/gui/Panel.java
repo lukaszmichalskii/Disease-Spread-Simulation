@@ -32,7 +32,8 @@ public class Panel extends JPanel implements ActionListener {
         for(int i = 0; i < POPULATION; i++) {
             if (i < (int)(0.5 * POPULATION))
                 people.add(new Men());
-            people.add(new Woman());
+            else
+                people.add(new Woman());
         }
 
         timer = new Timer(delay, this);
