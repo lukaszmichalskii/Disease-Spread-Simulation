@@ -45,7 +45,7 @@ public class Logic {
 
     /**
      * Defines what will be done if human realizes the danger posed by the disease
-     * @param human
+     * @param human an object that will begin to distance itself when the method is called
      */
     public static void distanceYourself(Human human) {
         human.setAcceleration(new Vector());
@@ -55,7 +55,7 @@ public class Logic {
 
     /**
      * Update the human object fields
-     * @param human
+     * @param human object that will update parameters when the method is called
      */
     public static void update(Human human) {
         human.velocity.add(human.getAcceleration());

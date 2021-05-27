@@ -12,7 +12,7 @@ import static society.Doctor.numInfected;
  */
 public class DiseaseSpreader {
 
-    public static int DISEASE_MORALITY_INDEX;
+    public static int DISEASE_MORTALITY_INDEX;
     public static int SAFE_LEVEL_IMMUNITY = 8;
     public static double initial_numInfected;
 

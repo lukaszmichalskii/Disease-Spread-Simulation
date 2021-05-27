@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import static disease.DiseaseSpreader.DISEASE_MORALITY_INDEX;
+import static disease.DiseaseSpreader.DISEASE_MORTALITY_INDEX;
 import static disease.DiseaseSpreader.initial_numInfected;
 import static society.Government.POPULATION;
 
@@ -40,7 +40,7 @@ public abstract class MenuScreen extends JPanel implements ActionListener {
         setDiseaseMorality.setPaintTicks(true);
         setDiseaseMorality.setMinorTickSpacing(10);
         textDiseaseMorality.setText("Disease morality: " + setDiseaseMorality.getValue());
-        DISEASE_MORALITY_INDEX = setDiseaseMorality.getValue();
+        DISEASE_MORTALITY_INDEX = setDiseaseMorality.getValue();
 
         setInitialInfections.setMajorTickSpacing(100);
         setInitialInfections.setPaintTicks(true);
@@ -63,7 +63,7 @@ public abstract class MenuScreen extends JPanel implements ActionListener {
 
         setDiseaseMorality.addChangeListener(e -> {
             textDiseaseMorality.setText("Disease morality: " + setDiseaseMorality.getValue());
-            DISEASE_MORALITY_INDEX = setDiseaseMorality.getValue();
+            DISEASE_MORTALITY_INDEX = setDiseaseMorality.getValue();
         });
 
         setInitialInfections.addChangeListener(e -> {
