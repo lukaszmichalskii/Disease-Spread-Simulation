@@ -7,13 +7,15 @@ import static disease.DiseaseSpreader.initial_numInfected;
 import static gui.Screen.WIN_HEIGHT;
 import static gui.Screen.WIN_WIDTH;
 import static society.Doctor.numInfected;
+import static society.Government.peoplePayAttention;
+import static society.Logic.maxSpeed;
 
 /**
  * class Human is model from which other objects of society inherit.
  * Here the basic human parameters in the simulation are defined.
  * @author Lukasz Michalski
  */
-public abstract class Human {
+public abstract class Human implements IHuman {
 
 
     protected Vector position;
@@ -23,16 +25,13 @@ public abstract class Human {
     protected final int MAX_RESISTANCE = 10;
     protected int healthStatus; // 0 - never sick, 1 - infected, 2 - passed the disease, 3 - dead
     protected double recoveryTime;
-    protected int antibodies;
-
-    private double maxSpeed, maxForce;
+    protected double antibodies;
+    protected int numSick = 0;
 
     /**
      * Default constructor, creates a Human object with the specified but random position and velocity.
      */
     public Human() {
-        maxForce = 0.2;
-        maxSpeed = 4;
         antibodies = 0;
         acceleration = new Vector();
 
@@ -52,6 +51,7 @@ public abstract class Human {
         if (Math.random() < initial_numInfected) {
             healthStatus = 1;
             numInfected++;
+            numSick++;
         }
     }
 
@@ -78,6 +78,11 @@ public abstract class Human {
         }
 
         position.add(velocity);
+
+        if (Math.random() < peoplePayAttention) {
+            Logic.distanceYourself(this);
+            Logic.update(this);
+        }
     }
 
     /**
@@ -112,22 +117,8 @@ public abstract class Human {
     /**
      * @return antibodies of human
      */
-    public int getAntibodies() {
+    public double getAntibodies() {
         return antibodies;
-    }
-
-    /**
-     * @return maximum speed value
-     */
-    public double getMaxSpeed() {
-        return maxSpeed;
-    }
-
-    /**
-     * @return maximum force value
-     */
-    public double getMaxForce() {
-        return maxForce;
     }
 
     /**
@@ -143,5 +134,12 @@ public abstract class Human {
      */
     public void setAcceleration(Vector acceleration) {
         this.acceleration = acceleration;
+    }
+
+    /**
+     *
+     */
+    public void increaseNumSick() {
+        this.numSick++;
     }
 }

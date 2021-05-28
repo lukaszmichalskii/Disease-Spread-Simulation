@@ -11,18 +11,27 @@ import static gui.Panel.people;
  */
 public class Logic {
 
+    public static double maxSpeed = 5;
+    public static double maxForce = 0.5;
+
     /**
      * Method defines the logic of social distancing behavior
      * @param human considered object
      * @return steering is vector which stores information about force of social distancing
      */
     public static Vector socialDistancing(Human human) {
-        int perceptionRadius = 30;
+        int perceptionRadius = 20;
         int total = 0;
         double dist;
         Vector steering = new Vector();
 
         for (Human humanEntity: people) {
+
+            /*
+            Skip the deceased person pay attention only to living people.
+            You do not know anything about met person, he/she could be sick and has antibodies or
+            never been sick but you know that he/she may be virus carrier like in real life.
+            */
             if (humanEntity.healthStatus != 3 && human.healthStatus != 3) {
                 dist = Vector.dist(human.position, humanEntity.position);
                 if (dist < perceptionRadius && human != humanEntity) {
@@ -37,8 +46,8 @@ public class Logic {
         if (total > 0) {
             steering.div(total);
             steering.sub(human.velocity);
-            steering.mult(human.getMaxSpeed());
-            steering.limit(human.getMaxForce());
+            steering.mult(maxSpeed);
+            steering.limit(maxForce);
         }
         return steering;
     }
@@ -59,6 +68,6 @@ public class Logic {
      */
     public static void update(Human human) {
         human.velocity.add(human.getAcceleration());
-        human.velocity.limit(human.getMaxSpeed());
+        human.velocity.limit(maxSpeed);
     }
 }

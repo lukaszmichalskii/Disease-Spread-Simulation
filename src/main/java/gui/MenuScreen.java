@@ -59,7 +59,7 @@ public abstract class MenuScreen extends JPanel implements ActionListener {
         setPeoplePayAttention.setPaintTicks(true);
         setPeoplePayAttention.setMinorTickSpacing(10);
         textPeoplePayAttention.setText("People social distance on their own: " + setPeoplePayAttention.getValue() + "%");
-        peoplePayAttention = setDiseaseMortality.getValue();
+        peoplePayAttention = (double) setPeoplePayAttention.getValue()/100;
 
         startBtn.setBounds(30,40,100,40);
         setPopulation.setBounds(30,100,300,38);
@@ -91,12 +91,13 @@ public abstract class MenuScreen extends JPanel implements ActionListener {
 
         setPeoplePayAttention.addChangeListener(e -> {
             textPeoplePayAttention.setText("People social distanceon their own: " + setPeoplePayAttention.getValue() + "%");
-            peoplePayAttention = setPeoplePayAttention.getValue();
+            peoplePayAttention = (double) setPeoplePayAttention.getValue()/100;
         });
 
         chartsOption.setFocusable(false);
         socialDistancingOption.setFocusable(false);
 
+        startBtn.setFont(new Font("Consolas", Font.PLAIN, 15));
         setInitialInfections.setFont(new Font("Consolas", Font.PLAIN, 15));
         textPopulation.setFont(new Font("Consolas", Font.PLAIN, 15));
         setDiseaseMortality.setFont(new Font("Consolas", Font.PLAIN, 15));
@@ -132,6 +133,6 @@ public abstract class MenuScreen extends JPanel implements ActionListener {
      * Method determines what runs when the start button is pressed
      * @param e see <a href="https://docs.oracle.com/javase/7/docs/api/java/awt/event/ActionEvent.html">Class Graphics</a>
      */
-    @Override
     public abstract void actionPerformed(ActionEvent e);
+
 }
