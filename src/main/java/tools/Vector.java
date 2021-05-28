@@ -39,8 +39,8 @@ public class Vector {
     }
 
     /**
-     * Substract method
-     * @param vector is object we want to substract to our original
+     * Subtract method
+     * @param vector is object we want to subtract to our original
      */
     public void sub(Vector vector) {
         x -= vector.x;
@@ -97,7 +97,7 @@ public class Vector {
      * Calculate distance between vector objects, the considered vectors are parameters
      * @param v1
      * @param v2
-     * @return
+     * @return distance between v1 and v2 vectors
      */
     public static double dist(Vector v1, Vector v2) {
         return sqrt(pow(v1.x - v2.x, 2) + pow(v1.y - v2.y, 2));

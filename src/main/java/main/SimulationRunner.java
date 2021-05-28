@@ -13,7 +13,7 @@ public class SimulationRunner extends MenuScreen {
 
     /**
      * Main method of simulation
-     * @param args
+     * @param args basic main function arguments
      */
     public static void main(String[] args) {
         SimulationRunner runner = new SimulationRunner();
