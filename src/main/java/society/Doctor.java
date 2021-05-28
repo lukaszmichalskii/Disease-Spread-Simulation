@@ -21,7 +21,7 @@ public class Doctor {
         int normalTimeDelta = 16;
 
         // conditions of death
-        if (human.healthStatus == 1 && human.resistance <= DISEASE_MORTALITY_INDEX){
+        if (human.getHealthStatus() == 1 && human.getResistance() <= DISEASE_MORTALITY_INDEX){
             human.recoveryTime -= fastTimeDelta;
             if (human.recoveryTime <= 0) {
                 human.velocity.reset();
@@ -33,7 +33,7 @@ public class Doctor {
         }
 
         // conditions for really strong people
-        else if (human.healthStatus == 1 && human.resistance >= SAFE_LEVEL_IMMUNITY){
+        else if (human.getHealthStatus() == 1 && human.getResistance() >= SAFE_LEVEL_IMMUNITY){
             human.recoveryTime -= fastTimeDelta;
             if (human.recoveryTime <= 0){
                 human.healthStatus = 2;
@@ -47,7 +47,7 @@ public class Doctor {
         }
 
         // conditions for normal people
-        else if (human.healthStatus == 1 && human.resistance < SAFE_LEVEL_IMMUNITY && human.resistance > DISEASE_MORTALITY_INDEX){
+        else if (human.getHealthStatus() == 1 && human.getResistance() < SAFE_LEVEL_IMMUNITY && human.getResistance() > DISEASE_MORTALITY_INDEX){
             human.velocity.div(1.001);
             human.recoveryTime -= normalTimeDelta;
             if (human.recoveryTime <= 0){
