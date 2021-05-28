@@ -51,7 +51,7 @@ public class Doctor {
             human.velocity.div(1.001);
             human.recoveryTime -= normalTimeDelta;
             if (human.recoveryTime <= 0){
-                human.velocity.mult(2);
+                human.velocity.mult(3);
                 human.velocity.limit(maxSpeed);
                 human.healthStatus = 2;
                 numInfected--;
@@ -69,7 +69,7 @@ public class Doctor {
      * @param human the person on the test
      */
     public static void antibodies(Human human) {
-        human.antibodies = (int)Math.random()*10000;
+        human.antibodies = Math.random()*10000;
     }
 
     /**

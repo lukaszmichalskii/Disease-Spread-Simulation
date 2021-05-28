@@ -25,7 +25,7 @@ public abstract class Human implements IHuman {
     protected final int MAX_RESISTANCE = 10;
     protected int healthStatus; // 0 - never sick, 1 - infected, 2 - passed the disease, 3 - dead
     protected double recoveryTime;
-    protected int antibodies;
+    protected double antibodies;
     protected int numSick = 0;
 
     /**
@@ -117,7 +117,7 @@ public abstract class Human implements IHuman {
     /**
      * @return antibodies of human
      */
-    public int getAntibodies() {
+    public double getAntibodies() {
         return antibodies;
     }
 
