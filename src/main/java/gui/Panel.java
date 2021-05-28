@@ -67,11 +67,6 @@ public class Panel extends JPanel implements ActionListener {
             Doctor.diagnose(human);
             Police.control(human);
 
-            if (Math.random() <= peoplePayAttention) {
-                Logic.distanceYourself(human);
-                Logic.update(human);
-            }
-
             // only when the disease becomes dangerous and social distancing option is selected
             if (socialDistancingOption.isSelected())
                 Government.introduceRestrictions(human);

@@ -11,6 +11,9 @@ import static gui.Panel.people;
  */
 public class Logic {
 
+    public static double maxSpeed = 4;
+    public static double maxForce = 0.2;
+
     /**
      * Method defines the logic of social distancing behavior
      * @param human considered object
@@ -37,8 +40,8 @@ public class Logic {
         if (total > 0) {
             steering.div(total);
             steering.sub(human.velocity);
-            steering.mult(human.getMaxSpeed());
-            steering.limit(human.getMaxForce());
+            steering.mult(maxSpeed);
+            steering.limit(maxForce);
         }
         return steering;
     }
@@ -59,6 +62,6 @@ public class Logic {
      */
     public static void update(Human human) {
         human.velocity.add(human.getAcceleration());
-        human.velocity.limit(human.getMaxSpeed());
+        human.velocity.limit(maxSpeed);
     }
 }

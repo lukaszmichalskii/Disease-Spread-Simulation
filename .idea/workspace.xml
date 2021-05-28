@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0a1341df-8351-42ef-9371-918b093ca054" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/MenuScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/MenuScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/Panel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/society/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/society/Doctor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/society/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/society/Human.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/society/Logic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/society/Logic.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="UML Use Case" />
+        <option value="UML Class" />
+        <option value="UML Object" />
+        <option value="UML State" />
+        <option value="UML Activity" />
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1rIbajdaM4W7I6ucfLI6pWJbO2u" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultPlantUmlFileTemplate" value="UML Activity" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PWr\Programwanie obiektowe\Disease-Spread-Simulation\uml\class diagrams" />
+      <recent name="D:\PWr\Programwanie obiektowe\Disease-Spread-Simulation" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.SimulationRunner">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.Main" />
+      <module name="Disease-Spread-Simulation.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Screen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.Screen" />
+      <module name="Disease-Spread-Simulation.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimulationRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.SimulationRunner" />
+      <module name="Disease-Spread-Simulation.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Disease-Spread-Simulation [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Disease-Spread-Simulation [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.Disease-Spread-Simulation [build]" />
+        <item itemvalue="Application.SimulationRunner" />
+        <item itemvalue="Gradle.Disease-Spread-Simulation [clean]" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Screen" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0a1341df-8351-42ef-9371-918b093ca054" name="Default Changelist" comment="" />
+      <created>1618666618222</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1618666618222</updated>
+      <workItem from="1618666621290" duration="2585000" />
+      <workItem from="1618741158327" duration="4786000" />
+      <workItem from="1619024669068" duration="2601000" />
+      <workItem from="1619164226285" duration="6157000" />
+      <workItem from="1619172027496" duration="2478000" />
+      <workItem from="1619182271597" duration="3317000" />
+      <workItem from="1619253264045" duration="4601000" />
+      <workItem from="1619260611961" duration="209000" />
+      <workItem from="1619260881832" duration="8000" />
+      <workItem from="1619262286264" duration="99000" />
+      <workItem from="1619262504660" duration="341000" />
+      <workItem from="1619262867322" duration="1876000" />
+      <workItem from="1619279087112" duration="4000000" />
+      <workItem from="1619283599585" duration="687000" />
+      <workItem from="1619284317931" duration="686000" />
+      <workItem from="1619372004516" duration="406000" />
+      <workItem from="1619372432907" duration="1884000" />
+      <workItem from="1619376365551" duration="4683000" />
+      <workItem from="1619418095434" duration="1296000" />
+      <workItem from="1619424180473" duration="1780000" />
+      <workItem from="1619435210210" duration="167000" />
+      <workItem from="1619543869136" duration="347000" />
+      <workItem from="1619763939092" duration="251000" />
+      <workItem from="1619764250387" duration="8198000" />
+      <workItem from="1619809782997" duration="773000" />
+      <workItem from="1620057298221" duration="633000" />
+      <workItem from="1620368856741" duration="3099000" />
+      <workItem from="1620379143783" duration="37000" />
+      <workItem from="1620383795739" duration="6867000" />
+      <workItem from="1620458371565" duration="12718000" />
+      <workItem from="1620471390759" duration="34000" />
+      <workItem from="1620471648517" duration="1074000" />
+      <workItem from="1620472866279" duration="2461000" />
+      <workItem from="1620838559407" duration="3012000" />
+      <workItem from="1620983531238" duration="3766000" />
+      <workItem from="1621170722881" duration="257000" />
+      <workItem from="1621171028098" duration="516000" />
+      <workItem from="1621236797779" duration="12327000" />
+      <workItem from="1621255466356" duration="733000" />
+      <workItem from="1621448061592" duration="8000" />
+      <workItem from="1621585588842" duration="4195000" />
+      <workItem from="1622038824068" duration="684000" />
+      <workItem from="1622042200090" duration="632000" />
+      <workItem from="1622043386276" duration="5127000" />
+      <workItem from="1622050248437" duration="14000" />
+      <workItem from="1622144380709" duration="1043000" />
+      <workItem from="1622183669791" duration="7799000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Delete useless elements, separate run simulation function" />
+  </component>
+</project>

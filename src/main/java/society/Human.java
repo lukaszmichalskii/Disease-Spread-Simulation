@@ -7,13 +7,15 @@ import static disease.DiseaseSpreader.initial_numInfected;
 import static gui.Screen.WIN_HEIGHT;
 import static gui.Screen.WIN_WIDTH;
 import static society.Doctor.numInfected;
+import static society.Government.peoplePayAttention;
+import static society.Logic.maxSpeed;
 
 /**
  * class Human is model from which other objects of society inherit.
  * Here the basic human parameters in the simulation are defined.
  * @author Lukasz Michalski
  */
-public abstract class Human {
+public abstract class Human implements IHuman {
 
 
     protected Vector position;
@@ -25,14 +27,10 @@ public abstract class Human {
     protected double recoveryTime;
     protected int antibodies;
 
-    private double maxSpeed, maxForce;
-
     /**
      * Default constructor, creates a Human object with the specified but random position and velocity.
      */
     public Human() {
-        maxForce = 0.2;
-        maxSpeed = 4;
         antibodies = 0;
         acceleration = new Vector();
 
@@ -78,6 +76,11 @@ public abstract class Human {
         }
 
         position.add(velocity);
+
+        if (Math.random() <= peoplePayAttention) {
+            Logic.distanceYourself(this);
+            Logic.update(this);
+        }
     }
 
     /**
@@ -114,20 +117,6 @@ public abstract class Human {
      */
     public int getAntibodies() {
         return antibodies;
-    }
-
-    /**
-     * @return maximum speed value
-     */
-    public double getMaxSpeed() {
-        return maxSpeed;
-    }
-
-    /**
-     * @return maximum force value
-     */
-    public double getMaxForce() {
-        return maxForce;
     }
 
     /**

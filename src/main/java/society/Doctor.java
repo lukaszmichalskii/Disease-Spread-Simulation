@@ -1,6 +1,7 @@
 package society;
 
 import static disease.DiseaseSpreader.*;
+import static society.Logic.maxSpeed;
 
 /**
  * Class Doctor responds to the needs of society to define health status
@@ -51,7 +52,7 @@ public class Doctor {
             human.recoveryTime -= normalTimeDelta;
             if (human.recoveryTime <= 0){
                 human.velocity.mult(2);
-                human.velocity.limit(human.getMaxSpeed());
+                human.velocity.limit(maxSpeed);
                 human.healthStatus = 2;
                 numInfected--;
 
