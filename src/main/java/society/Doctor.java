@@ -21,7 +21,7 @@ public class Doctor {
         int normalTimeDelta = 16;
 
         // conditions of death
-        if (human.getHealthStatus() == 1 && human.getResistance() <= DISEASE_MORTALITY_INDEX){
+        if (human.getHealthStatus() == 1 && (human.getResistance() <= DISEASE_MORTALITY_INDEX || human.numSick >= 4)){
             human.recoveryTime -= fastTimeDelta;
             if (human.recoveryTime <= 0) {
                 human.velocity.reset();

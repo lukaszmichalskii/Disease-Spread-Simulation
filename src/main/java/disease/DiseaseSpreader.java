@@ -29,11 +29,13 @@ public class DiseaseSpreader {
             if (human1.getHealthStatus() == 1 && (human2.getHealthStatus() == 0 || (human2.getHealthStatus() == 2 && human2.getAntibodies() <= 0))) {
                 human2.setHealthStatus(1);
                 numInfected++;
+                human2.increaseNumSick();
             }
 
             else if (human2.getHealthStatus() == 1 && (human1.getHealthStatus() == 0 || (human1.getHealthStatus() == 2 && human1.getAntibodies() <= 0))) {
                 human1.setHealthStatus(1);
                 numInfected++;
+                human1.increaseNumSick();
             }
         }
     }

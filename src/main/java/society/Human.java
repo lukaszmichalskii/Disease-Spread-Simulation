@@ -26,6 +26,7 @@ public abstract class Human implements IHuman {
     protected int healthStatus; // 0 - never sick, 1 - infected, 2 - passed the disease, 3 - dead
     protected double recoveryTime;
     protected int antibodies;
+    protected int numSick = 0;
 
     /**
      * Default constructor, creates a Human object with the specified but random position and velocity.
@@ -50,6 +51,7 @@ public abstract class Human implements IHuman {
         if (Math.random() < initial_numInfected) {
             healthStatus = 1;
             numInfected++;
+            numSick++;
         }
     }
 
@@ -77,7 +79,7 @@ public abstract class Human implements IHuman {
 
         position.add(velocity);
 
-        if (Math.random() <= peoplePayAttention) {
+        if (Math.random() < peoplePayAttention) {
             Logic.distanceYourself(this);
             Logic.update(this);
         }
@@ -132,5 +134,12 @@ public abstract class Human implements IHuman {
      */
     public void setAcceleration(Vector acceleration) {
         this.acceleration = acceleration;
+    }
+
+    /**
+     *
+     */
+    public void increaseNumSick() {
+        this.numSick++;
     }
 }
