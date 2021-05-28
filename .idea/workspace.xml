@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0a1341df-8351-42ef-9371-918b093ca054" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/disease/DiseaseSpreader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/disease/DiseaseSpreader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/society/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/society/Doctor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/society/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/society/Human.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/Panel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,8 +41,8 @@
         <option value="UML Object" />
         <option value="UML State" />
         <option value="UML Activity" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -223,7 +221,7 @@
       <workItem from="1622043386276" duration="5127000" />
       <workItem from="1622050248437" duration="14000" />
       <workItem from="1622144380709" duration="1043000" />
-      <workItem from="1622183669791" duration="8873000" />
+      <workItem from="1622183669791" duration="10328000" />
     </task>
     <servers />
   </component>

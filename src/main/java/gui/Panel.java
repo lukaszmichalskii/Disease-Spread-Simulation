@@ -2,6 +2,7 @@ package gui;
 
 import disease.DiseaseSpreader;
 import society.*;
+import tools.SocietyCreator;
 
 import javax.swing.*;
 import java.awt.*;
@@ -16,7 +17,6 @@ import static gui.Screen.FRAME_WIDTH;
 import static society.Doctor.numDead;
 import static society.Doctor.numInfected;
 import static society.Government.POPULATION;
-import static society.Government.peoplePayAttention;
 
 /**
  * The Panel class is responsible for background of simulation.
@@ -39,12 +39,7 @@ public class Panel extends JPanel implements ActionListener {
     public Panel() {
         this.setBackground(Color.LIGHT_GRAY);
 
-        for(int i = 0; i < POPULATION; i++) {
-            if (i < (int)(0.5 * POPULATION))
-                people.add(new Men());
-            else
-                people.add(new Woman());
-        }
+        people = SocietyCreator.createSociety(POPULATION);
 
         timer = new Timer(delay, this);
         timer.start();
