@@ -9,6 +9,7 @@ import javax.swing.*;
 public class Screen extends JFrame {
     public static final int WIN_WIDTH = 1280;
     public static final int WIN_HEIGHT = 720;
+    public static final int FRAME_WIDTH = 40;
 
     /**
      * Default constructor

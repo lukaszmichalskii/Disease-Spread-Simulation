@@ -49,12 +49,12 @@ public abstract class MenuScreen extends JPanel implements ActionListener {
         initial_numInfected = (double) setInitialInfections.getValue()/100;
 
         startBtn.setBounds(160,40,100,40);
-        setPopulation.setBounds(60,120,300,40);
-        textPopulation.setBounds(160,150,100,30);
-        setDiseaseMorality.setBounds(60, 200, 300, 40);
-        textDiseaseMorality.setBounds(160, 230, 150, 30);
-        setInitialInfections.setBounds(60,280,300,40);
-        textInInitialInfections.setBounds(160,310,150,30);
+        setPopulation.setBounds(60,100,300,40);
+        textPopulation.setBounds(160,130,100,30);
+        setDiseaseMorality.setBounds(60, 160, 300, 40);
+        textDiseaseMorality.setBounds(160, 190, 150, 30);
+        setInitialInfections.setBounds(60,220,300,40);
+        textInInitialInfections.setBounds(160,250,150,30);
 
         setPopulation.addChangeListener(e -> {
             textPopulation.setText("Population: " + setPopulation.getValue());
@@ -72,6 +72,7 @@ public abstract class MenuScreen extends JPanel implements ActionListener {
         });
 
         frame.add(startBtn);
+
         frame.add(setPopulation);
         frame.add(setDiseaseMorality);
         frame.add(setInitialInfections);
