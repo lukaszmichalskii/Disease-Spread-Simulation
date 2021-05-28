@@ -10,10 +10,11 @@ import static society.Doctor.numInfected;
 public class Government {
 
     public static int POPULATION = 200;
+    public static double peoplePayAttention;
 
     /**
-     * Method introduce restrictions to whole society.
-     * @param human
+     * Method introduce restrictions to pass argument.
+     * @param human on which restriction is introduce
      */
     public static void introduceRestrictions(Human human) {
         if (isDangerous()) {
@@ -24,7 +25,7 @@ public class Government {
 
     /**
      * isDangerous method decide when restrictions is necessary.
-     * @return
+     * @return decision if it is safe - true, otherwise false
      */
     private static boolean isDangerous() {
         return numInfected >= 0.7 * (POPULATION - numDead) || numDead >= 0.3 * (POPULATION - numDead);

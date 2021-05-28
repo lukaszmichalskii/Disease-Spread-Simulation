@@ -18,8 +18,8 @@ public class DiseaseSpreader {
 
     /**
      * Defining the rules of the spread of plague
-     * @param human1
-     * @param human2
+     * @param human1 first one participating in the meeting
+     * @param human2 second one participating in the meeting
      */
     public static void collision(Human human1, Human human2) {
         Rectangle human1Radius = new Rectangle((int)human2.getPosition().x, (int)human2.getPosition().y, 10, 10);
