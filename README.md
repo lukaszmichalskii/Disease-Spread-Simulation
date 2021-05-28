@@ -13,7 +13,7 @@ The simulation process depends on several parameters (set by the user) like:
 - people's initial behavior (some may pay more attention to virus threat)
 
 
-Application gives posibility to set two optional functions like:
+Application gives possibility to set two optional functions like:
 - charts of deaths and infections
 - simple behavior imitating social distancing when the government decided to introduce restrictions
 
