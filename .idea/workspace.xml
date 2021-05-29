@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02e83bdb-ff44-4c2f-8aac-669a9d9f7b1c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tools/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tools/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tools/SocietyCreatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tools/SocietyCreatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +90,7 @@
       <recent name="D:\PWr\Programwanie obiektowe\Disease-Spread-Simulation" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SimulationRunner">
+  <component name="RunManager" selected="Gradle.Disease-Spread-Simulation [test]">
     <configuration name="SimulationRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.SimulationRunner" />
       <module name="Disease-Spread-Simulation.main" />
@@ -202,8 +201,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.SocietyCreatorTest" />
         <item itemvalue="Gradle.Disease-Spread-Simulation [test]" />
+        <item itemvalue="Gradle.SocietyCreatorTest" />
         <item itemvalue="Gradle.Disease-Spread-Simulation [build]" />
         <item itemvalue="Application.SimulationRunner" />
         <item itemvalue="Gradle.Disease-Spread-Simulation [clean]" />
@@ -267,7 +266,7 @@
       <workItem from="1622183669791" duration="13184000" />
       <workItem from="1622210234783" duration="3261000" />
       <workItem from="1622230753851" duration="460000" />
-      <workItem from="1622278125871" duration="11625000" />
+      <workItem from="1622278125871" duration="12330000" />
     </task>
     <servers />
   </component>

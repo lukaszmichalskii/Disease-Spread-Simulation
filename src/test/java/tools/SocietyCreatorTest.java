@@ -16,9 +16,5 @@ public class SocietyCreatorTest {
 
         Assertions.assertEquals(5,test.size(), "Society creator test failed");
         Assertions.assertNull(test2, "Society creator return null failed");
-
-        for (Human h: test) {
-            Assertions.assertTrue(h instanceof Human, "Society creator test failed - create diffrent object");
-        }
     }
 }
