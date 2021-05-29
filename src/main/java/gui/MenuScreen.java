@@ -27,7 +27,7 @@ public abstract class MenuScreen extends JPanel implements ActionListener {
         JSlider setPopulation = new JSlider(10,500,300);
         JSlider setDiseaseMortality = new JSlider(0, 10, 3);
         JSlider setInitialInfections = new JSlider(0 , 100, 8);
-        JSlider setPeoplePayAttention = new JSlider(0 , 100, 7);
+        JSlider setPeoplePayAttention = new JSlider(0 , 100, 4);
         JLabel textPopulation = new JLabel();
         JLabel textDiseaseMortality = new JLabel();
         JLabel textInitialInfections = new JLabel();

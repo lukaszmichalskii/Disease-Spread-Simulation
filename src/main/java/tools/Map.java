@@ -27,6 +27,7 @@ public class Map {
         map = mapCreator(movement);
     }
 
+
     /**
      * Create map of human movement attributes
      * @param attributesStack array of dictionaries with position, velocity and acceleration values

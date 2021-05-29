@@ -28,7 +28,7 @@ public class VectorTest {
     public void magnitudeTest() {
         Vector v = new Vector(4,5);
         double mag = v.magnitude();
-        Assertions.assertTrue(mag == Math.sqrt(41));
+        Assertions.assertEquals(Math.sqrt(41), mag);
     }
 
     @Test

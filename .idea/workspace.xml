@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02e83bdb-ff44-4c2f-8aac-669a9d9f7b1c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/java/tools/SocietyCreatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tools/SocietyCreatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/MenuScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/MenuScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/Panel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/society/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/society/Doctor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tools/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tools/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tools/VectorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tools/VectorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +95,7 @@
       <recent name="D:\PWr\Programwanie obiektowe\Disease-Spread-Simulation" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Disease-Spread-Simulation [test]">
+  <component name="RunManager" selected="Application.SimulationRunner">
     <configuration name="SimulationRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.SimulationRunner" />
       <module name="Disease-Spread-Simulation.main" />
@@ -115,48 +120,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Disease-Spread-Simulation [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="Disease-Spread-Simulation [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="clean" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="Disease-Spread-Simulation [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -174,6 +137,48 @@
         <option name="vmOptions" />
       </ExternalSystemSettings>
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="MapTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;tools.MapTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="MapTest.mapTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;tools.MapTest.mapTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
@@ -201,11 +206,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Disease-Spread-Simulation [test]" />
-        <item itemvalue="Gradle.SocietyCreatorTest" />
-        <item itemvalue="Gradle.Disease-Spread-Simulation [build]" />
         <item itemvalue="Application.SimulationRunner" />
-        <item itemvalue="Gradle.Disease-Spread-Simulation [clean]" />
+        <item itemvalue="Gradle.Disease-Spread-Simulation [test]" />
+        <item itemvalue="Gradle.MapTest.mapTest" />
+        <item itemvalue="Gradle.MapTest" />
+        <item itemvalue="Gradle.SocietyCreatorTest" />
       </list>
     </recent_temporary>
   </component>
@@ -266,7 +271,7 @@
       <workItem from="1622183669791" duration="13184000" />
       <workItem from="1622210234783" duration="3261000" />
       <workItem from="1622230753851" duration="460000" />
-      <workItem from="1622278125871" duration="12330000" />
+      <workItem from="1622278125871" duration="14949000" />
     </task>
     <servers />
   </component>

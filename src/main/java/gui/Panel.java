@@ -61,6 +61,9 @@ public class Panel extends JPanel implements ActionListener {
         deathsChart.add(new tools.Vector((double) time/delay, numDead));
         time += 10;
 
+        for (int i = 0; i < people.size(); i++)
+            for (int j = i+1; j < people.size(); j++)
+                DiseaseSpreader.collision(people.get(j), people.get(i));
 
         for (Human human: people) {
             human.paint(graphics);
@@ -72,9 +75,6 @@ public class Panel extends JPanel implements ActionListener {
                 Government.introduceRestrictions(human);
         }
 
-        for (int i = 0; i < people.size(); i++)
-            for (int j = i+1; j < people.size(); j++)
-                DiseaseSpreader.collision(people.get(j), people.get(i));
 
         // only if charts option is selected
         if (chartsOption.isSelected()) {
