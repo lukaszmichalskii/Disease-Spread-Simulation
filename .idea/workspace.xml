@@ -6,17 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="02e83bdb-ff44-4c2f-8aac-669a9d9f7b1c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/disease/DiseaseSpreader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/disease/DiseaseSpreader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/MenuScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/MenuScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/Panel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/SimulationRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/SimulationRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/society/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/society/Doctor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/society/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/society/Human.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/society/IHuman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/society/IHuman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/society/Logic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/society/Logic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/society/Men.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/society/Men.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/society/Police.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/society/Police.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/society/Woman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/society/Woman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tools/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tools/Map.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tools/SocietyCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tools/SocietyCreator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tools/Vector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tools/Vector.java" afterDir="false" />
     </list>
@@ -38,7 +28,23 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Disease-Spread-Simulation" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Disease-Spread-Simulation" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Disease-Spread-Simulation" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -88,32 +94,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.SimulationRunner">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.Main" />
-      <module name="Disease-Spread-Simulation.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="gui.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Screen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="gui.Screen" />
-      <module name="Disease-Spread-Simulation.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="gui.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SimulationRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.SimulationRunner" />
       <module name="Disease-Spread-Simulation.main" />
@@ -180,13 +160,55 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="Disease-Spread-Simulation [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="SocietyCreatorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;tools.SocietyCreatorTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.SocietyCreatorTest" />
+        <item itemvalue="Gradle.Disease-Spread-Simulation [test]" />
         <item itemvalue="Gradle.Disease-Spread-Simulation [build]" />
         <item itemvalue="Application.SimulationRunner" />
         <item itemvalue="Gradle.Disease-Spread-Simulation [clean]" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Screen" />
       </list>
     </recent_temporary>
   </component>
@@ -247,7 +269,7 @@
       <workItem from="1622183669791" duration="13184000" />
       <workItem from="1622210234783" duration="3261000" />
       <workItem from="1622230753851" duration="460000" />
-      <workItem from="1622278125871" duration="4871000" />
+      <workItem from="1622278125871" duration="10490000" />
     </task>
     <servers />
   </component>

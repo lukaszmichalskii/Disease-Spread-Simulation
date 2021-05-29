@@ -18,14 +18,18 @@ public class SocietyCreator {
      * @return list of humans
      */
     public ArrayList<Human> createSociety(int SIZE) {
-        ArrayList<Human> society = new ArrayList<>();
-        for(int i = 0; i < SIZE; i++) {
-            if (i < (int)(0.5 * SIZE))
-                society.add(new Men());
-            else
-                society.add(new Woman());
+        if (SIZE > 0) {
+            ArrayList<Human> society = new ArrayList<>();
+            for(int i = 0; i < SIZE; i++) {
+                if (i < (int)(0.5 * SIZE))
+                    society.add(new Men());
+                else
+                    society.add(new Woman());
+            }
+
+            return society;
         }
 
-        return society;
+        return null;
     }
 }

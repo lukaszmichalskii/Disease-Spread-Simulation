@@ -13,35 +13,41 @@ import static society.Logic.maxSpeed;
 public class Map {
 
     private java.util.Map<Human, java.util.Map<String, Vector>> map;
-    private ArrayList<java.util.Map<String, Vector>> movement;
 
-    ArrayList<java.util.Map<String, Vector>> attributesStack;
 
     public Map(int SIZE) {
-        map = new HashMap<>();
-        movement = attributesCreator(SIZE);
-        map = mapCreator(SIZE);
+        ArrayList<java.util.Map<String, Vector>> movement = attributesCreator(SIZE);
+        map = mapCreator(movement);
     }
 
-    private java.util.Map<Human, java.util.Map<String, Vector>> mapCreator(int SIZE) {
-        for (int i = 0; i < SIZE; i++) {
-            map.put(people.get(i), attributesStack.get(i));
+    private java.util.Map<Human, java.util.Map<String, Vector>> mapCreator(ArrayList<java.util.Map<String, Vector>> attributesStack) {
+        if (attributesStack != null) {
+            map = new HashMap<>();
+            for (int i = 0; i < attributesStack.size(); i++) {
+                map.put(people.get(i), attributesStack.get(i));
+            }
+
+            return map;
         }
 
-        return map;
+        return null;
     }
 
     private ArrayList<java.util.Map<String, Vector>> attributesCreator(int SIZE) {
-        attributesStack = new ArrayList<>();
-        for (int i = 0; i < SIZE; i++) {
-            java.util.Map<String, Vector> attributes = new HashMap<>();
-            attributes.put("position", new Vector(Math.random() * WIN_WIDTH, Math.random() * WIN_HEIGHT));
-            attributes.put("velocity", new Vector(Math.random() * (maxSpeed) +- 2, Math.random() * (maxSpeed) +- 2));
-            attributes.put("acceleration", new Vector());
-            attributesStack.add(attributes);
+        if (SIZE > 0) {
+            ArrayList<java.util.Map<String, Vector>> attributesStack = new ArrayList<>();
+            for (int i = 0; i < SIZE; i++) {
+                java.util.Map<String, Vector> attributes = new HashMap<>();
+                attributes.put("position", new Vector(Math.random() * WIN_WIDTH, Math.random() * WIN_HEIGHT));
+                attributes.put("velocity", new Vector(Math.random() * (maxSpeed) +- 2, Math.random() * (maxSpeed) +- 2));
+                attributes.put("acceleration", new Vector());
+                attributesStack.add(attributes);
+            }
+
+            return attributesStack;
         }
 
-        return attributesStack;
+        return null;
     }
 
     public Vector getPosition(Human human) {

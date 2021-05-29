@@ -90,17 +90,15 @@ public class Vector {
      * @param value our scalar
      */
     public Vector divR(double value){
-        x /= value;
-        y /= value;
-        return new Vector(x, y);
-    }
+        if (value == 0) {
+            return null;
+        }
+        else {
+            x /= value;
+            y /= value;
+        }
 
-    /**
-     * Method responsible for reset vector components
-     */
-    public void reset() {
-        x = 0;
-        y = 0;
+        return new Vector(x, y);
     }
 
     /**
