@@ -39,6 +39,16 @@ public class Vector {
     }
 
     /**
+     * Add method
+     * @param vector is object we want to add to our original
+     */
+    public Vector addR(Vector vector) {
+        x += vector.x;
+        y += vector.y;
+        return new Vector(x,y);
+    }
+
+    /**
      * Subtract method
      * @param vector is object we want to subtract to our original
      */
@@ -57,6 +67,16 @@ public class Vector {
     }
 
     /**
+     * Scalar multiplication method
+     * @param value our scalar
+     */
+    public Vector multR(double value) {
+        x *= value;
+        y *= value;
+        return new Vector(x, y);
+    }
+
+    /**
      * Division by a scalar method
      * @param value our scalar
      */
@@ -66,11 +86,28 @@ public class Vector {
     }
 
     /**
+     * Division by a scalar method
+     * @param value our scalar
+     */
+    public Vector divR(double value){
+        x /= value;
+        y /= value;
+        return new Vector(x, y);
+    }
+
+    /**
      * Method responsible for reset vector components
      */
     public void reset() {
         x = 0;
         y = 0;
+    }
+
+    /**
+     * Method responsible for reset vector components
+     */
+    public Vector resetR() {
+        return new Vector();
     }
 
     /**
@@ -91,6 +128,19 @@ public class Vector {
             x *= lim / magnitude;
             y *= lim / magnitude;
         }
+    }
+
+    /**
+     * Method responsible for the vector constraint
+     * @param lim value we do not want to pass
+     */
+    public Vector limitR(double lim) {
+        double magnitude = magnitude();
+        if (magnitude != 0 && magnitude > lim) {
+            x *= lim / magnitude;
+            y *= lim / magnitude;
+        }
+        return new Vector(x, y);
     }
 
     /**

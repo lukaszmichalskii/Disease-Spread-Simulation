@@ -17,7 +17,6 @@ public class SimulationRunner extends MenuScreen {
      */
     public static void main(String[] args) {
         SimulationRunner runner = new SimulationRunner();
-        //Screen screen = new Screen();
     }
 
     /**

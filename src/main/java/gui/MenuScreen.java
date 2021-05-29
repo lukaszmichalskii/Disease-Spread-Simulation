@@ -90,7 +90,7 @@ public abstract class MenuScreen extends JPanel implements ActionListener {
         });
 
         setPeoplePayAttention.addChangeListener(e -> {
-            textPeoplePayAttention.setText("People social distanceon their own: " + setPeoplePayAttention.getValue() + "%");
+            textPeoplePayAttention.setText("People social distance on their own: " + setPeoplePayAttention.getValue() + "%");
             peoplePayAttention = (double) setPeoplePayAttention.getValue()/100;
         });
 

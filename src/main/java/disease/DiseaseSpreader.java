@@ -5,6 +5,7 @@ import society.Human;
 import java.awt.*;
 
 import static society.Doctor.numInfected;
+import static gui.Panel.map;
 
 /**
  * Disease Spreader define the way disease spreading and how dangerous the plague is.
@@ -22,8 +23,9 @@ public class DiseaseSpreader {
      * @param human2 second one participating in the meeting
      */
     public static void collision(Human human1, Human human2) {
-        Rectangle human1Radius = new Rectangle((int)human2.getPosition().x, (int)human2.getPosition().y, 10, 10);
-        Rectangle human2Radius = new Rectangle((int)human1.getPosition().x, (int)human1.getPosition().y, 10, 10);
+
+        Rectangle human1Radius = new Rectangle((int)map.getPosition(human2).x, (int)map.getPosition(human2).y, 10, 10);
+        Rectangle human2Radius = new Rectangle((int)map.getPosition(human1).x, (int)map.getPosition(human1).y, 10, 10);
 
         if (human1Radius.intersects(human2Radius)) {
             if (human1.getHealthStatus() == 1 && (human2.getHealthStatus() == 0 || (human2.getHealthStatus() == 2 && human2.getAntibodies() <= 0))) {

@@ -2,6 +2,8 @@ package society;
 
 import tools.Vector;
 
+import static gui.Panel.map;
+
 
 import static gui.Panel.people;
 
@@ -33,10 +35,13 @@ public class Logic {
             never been sick but you know that he/she may be virus carrier like in real life.
             */
             if (humanEntity.healthStatus != 3 && human.healthStatus != 3) {
-                dist = Vector.dist(human.position, humanEntity.position);
+                dist = Vector.dist(map.getPosition(human), map.getPosition(humanEntity));
+//                dist = Vector.dist(human.position, humanEntity.position);
                 if (dist < perceptionRadius && human != humanEntity) {
-                    Vector diff = new Vector(human.position.x, human.position.y);
-                    diff.sub(humanEntity.position);
+                    Vector diff = new Vector(map.getPosition(human).x, map.getPosition(human).y);
+//                    Vector diff = new Vector(human.position.x, human.position.y);
+                    diff.sub(map.getPosition(humanEntity));
+//                    diff.sub(humanEntity.position);
                     diff.div(dist);
                     steering.add(diff);
                     total++;
@@ -45,7 +50,7 @@ public class Logic {
         }
         if (total > 0) {
             steering.div(total);
-            steering.sub(human.velocity);
+            steering.sub(map.getVelocity(human));
             steering.mult(maxSpeed);
             steering.limit(maxForce);
         }
@@ -57,9 +62,11 @@ public class Logic {
      * @param human an object that will begin to distance itself when the method is called
      */
     public static void distanceYourself(Human human) {
-        human.setAcceleration(new Vector());
+        map.setAcceleration(human, new Vector());
+//        human.setAcceleration(new Vector());
         Vector socialDistancing = socialDistancing(human);
-        human.setAcceleration(socialDistancing);
+        map.setAcceleration(human, socialDistancing);
+//        human.setAcceleration(socialDistancing);
     }
 
     /**
@@ -67,7 +74,9 @@ public class Logic {
      * @param human object that will update parameters when the method is called
      */
     public static void update(Human human) {
-        human.velocity.add(human.getAcceleration());
-        human.velocity.limit(maxSpeed);
+        map.setVelocity(human, map.getVelocity(human).addR(map.getAcceleration(human)));
+//        human.velocity.add(human.getAcceleration());
+        map.setVelocity(human, map.getVelocity(human).limitR(maxSpeed));
+//        human.velocity.limit(maxSpeed);
     }
 }
