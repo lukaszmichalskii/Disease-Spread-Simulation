@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="02e83bdb-ff44-4c2f-8aac-669a9d9f7b1c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/MenuScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/MenuScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/Panel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/society/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/society/Doctor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tools/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tools/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tools/VectorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tools/VectorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +65,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="1rIbajdaM4W7I6ucfLI6pWJbO2u" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -95,7 +99,7 @@
       <recent name="D:\PWr\Programwanie obiektowe\Disease-Spread-Simulation" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SimulationRunner">
+  <component name="RunManager" selected="Gradle.Disease-Spread-Simulation [test]">
     <configuration name="SimulationRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.SimulationRunner" />
       <module name="Disease-Spread-Simulation.main" />
@@ -109,13 +113,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -141,12 +147,33 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="MapTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="MapTest.attributesCreatorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;tools.MapTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;tools.MapTest.attributesCreatorTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="MapTest.mapCreatorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;tools.MapTest.mapCreatorTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -183,34 +210,13 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="SocietyCreatorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;tools.SocietyCreatorTest&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SimulationRunner" />
         <item itemvalue="Gradle.Disease-Spread-Simulation [test]" />
+        <item itemvalue="Gradle.MapTest.attributesCreatorTest" />
+        <item itemvalue="Gradle.MapTest.mapCreatorTest" />
+        <item itemvalue="Application.SimulationRunner" />
         <item itemvalue="Gradle.MapTest.mapTest" />
-        <item itemvalue="Gradle.MapTest" />
-        <item itemvalue="Gradle.SocietyCreatorTest" />
       </list>
     </recent_temporary>
   </component>
@@ -271,7 +277,8 @@
       <workItem from="1622183669791" duration="13184000" />
       <workItem from="1622210234783" duration="3261000" />
       <workItem from="1622230753851" duration="460000" />
-      <workItem from="1622278125871" duration="14949000" />
+      <workItem from="1622278125871" duration="15225000" />
+      <workItem from="1622300922735" duration="3420000" />
     </task>
     <servers />
   </component>
@@ -304,5 +311,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Delete useless elements, separate run simulation function" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NoSuchMethodException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

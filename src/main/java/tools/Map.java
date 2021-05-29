@@ -18,6 +18,8 @@ public class Map {
 
     private java.util.Map<Human, java.util.Map<String, Vector>> map;
 
+    public Map(){};
+
     /**
      * Constructor
      * @param SIZE
