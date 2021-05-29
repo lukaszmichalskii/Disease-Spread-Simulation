@@ -2,6 +2,7 @@ package society;
 
 import static gui.Screen.WIN_HEIGHT;
 import static gui.Screen.WIN_WIDTH;
+import static gui.Panel.map;
 
 /**
  * Class Police responsible for controlling society to stay in designated area
@@ -14,10 +15,12 @@ public class Police {
      */
     public static void control(Human human) {
             if (checkX(human))
-                human.velocity.x *= -1;
+                map.getVelocity(human).x *= -1;
+//                human.velocity.x *= -1;
 
             if (checkY(human))
-                human.velocity.y *= -1;
+                map.getVelocity(human).y *= -1;
+//                human.velocity.y *= -1;
     }
 
     /**
@@ -25,7 +28,8 @@ public class Police {
      * @return statement of condition being in designated area (horizontal)
      */
     public static boolean checkX(Human human) {
-        return human.position.x < 0 || human.position.x > WIN_WIDTH;
+        return map.getPosition(human).x < 0 || map.getPosition(human).x > WIN_WIDTH;
+//        return human.position.x < 0 || human.position.x > WIN_WIDTH;
     }
 
     /**
@@ -33,6 +37,7 @@ public class Police {
      * @return statement of condition being in designated area (vertical)
      */
     public static boolean checkY(Human human) {
-        return human.position.y < 0 || human.position.y > WIN_HEIGHT;
+        return map.getPosition(human).y < 0 || map.getPosition(human).y > WIN_HEIGHT;
+//        return human.position.y < 0 || human.position.y > WIN_HEIGHT;
     }
 }

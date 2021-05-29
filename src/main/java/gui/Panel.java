@@ -2,7 +2,9 @@ package gui;
 
 import disease.DiseaseSpreader;
 import society.*;
+import tools.Map;
 import tools.SocietyCreator;
+import tools.Vector;
 
 import javax.swing.*;
 import java.awt.*;
@@ -25,9 +27,10 @@ import static society.Government.POPULATION;
  */
 public class Panel extends JPanel implements ActionListener {
 
+    public static Map map;
     public static ArrayList<Human> people = new ArrayList<>();
-    private ArrayList<tools.Vector> infectionsChart = new ArrayList<>();
-    private ArrayList<tools.Vector> deathsChart = new ArrayList<>();
+    private final ArrayList<Vector> infectionsChart = new ArrayList<>();
+    private final ArrayList<Vector> deathsChart = new ArrayList<>();
 
     private final Timer timer;
     private final int delay = 12;
@@ -39,7 +42,9 @@ public class Panel extends JPanel implements ActionListener {
     public Panel() {
         this.setBackground(Color.LIGHT_GRAY);
 
-        people = SocietyCreator.createSociety(POPULATION);
+        SocietyCreator societyCreator = new SocietyCreator();
+        people = societyCreator.createSociety(POPULATION);
+        map = new Map(POPULATION);
 
         timer = new Timer(delay, this);
         timer.start();
@@ -56,6 +61,9 @@ public class Panel extends JPanel implements ActionListener {
         deathsChart.add(new tools.Vector((double) time/delay, numDead));
         time += 10;
 
+        for (int i = 0; i < people.size(); i++)
+            for (int j = i+1; j < people.size(); j++)
+                DiseaseSpreader.collision(people.get(j), people.get(i));
 
         for (Human human: people) {
             human.paint(graphics);
@@ -67,9 +75,6 @@ public class Panel extends JPanel implements ActionListener {
                 Government.introduceRestrictions(human);
         }
 
-        for (int i = 0; i < people.size(); i++)
-            for (int j = i+1; j < people.size(); j++)
-                DiseaseSpreader.collision(people.get(j), people.get(i));
 
         // only if charts option is selected
         if (chartsOption.isSelected()) {

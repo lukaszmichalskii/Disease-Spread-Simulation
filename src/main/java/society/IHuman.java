@@ -7,4 +7,5 @@ public interface IHuman {
     int getHealthStatus();
     void setHealthStatus(int healthStatus);
     double getAntibodies();
+    int getResistance();
 }

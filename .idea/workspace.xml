@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a1341df-8351-42ef-9371-918b093ca054" name="Default Changelist" comment="">
+    <list default="true" id="02e83bdb-ff44-4c2f-8aac-669a9d9f7b1c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/MenuScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/MenuScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/Panel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/society/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/society/Doctor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tools/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tools/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tools/VectorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tools/VectorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +30,23 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Disease-Spread-Simulation" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Disease-Spread-Simulation" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Disease-Spread-Simulation" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -75,32 +96,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.SimulationRunner">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.Main" />
-      <module name="Disease-Spread-Simulation.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="gui.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Screen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="gui.Screen" />
-      <module name="Disease-Spread-Simulation.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="gui.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SimulationRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.SimulationRunner" />
       <module name="Disease-Spread-Simulation.main" />
@@ -125,7 +120,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Disease-Spread-Simulation [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Disease-Spread-Simulation [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -136,7 +131,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="build" />
+            <option value="test" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -146,41 +141,83 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="Disease-Spread-Simulation [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="MapTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="--tests &quot;tools.MapTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="clean" />
+            <option value=":test" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="MapTest.mapTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;tools.MapTest.mapTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="SocietyCreatorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;tools.SocietyCreatorTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Disease-Spread-Simulation [build]" />
         <item itemvalue="Application.SimulationRunner" />
-        <item itemvalue="Gradle.Disease-Spread-Simulation [clean]" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Screen" />
+        <item itemvalue="Gradle.Disease-Spread-Simulation [test]" />
+        <item itemvalue="Gradle.MapTest.mapTest" />
+        <item itemvalue="Gradle.MapTest" />
+        <item itemvalue="Gradle.SocietyCreatorTest" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0a1341df-8351-42ef-9371-918b093ca054" name="Default Changelist" comment="" />
+      <changelist id="02e83bdb-ff44-4c2f-8aac-669a9d9f7b1c" name="Default Changelist" comment="" />
       <created>1618666618222</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -232,6 +269,9 @@
       <workItem from="1622050248437" duration="14000" />
       <workItem from="1622144380709" duration="1043000" />
       <workItem from="1622183669791" duration="13184000" />
+      <workItem from="1622210234783" duration="3261000" />
+      <workItem from="1622230753851" duration="460000" />
+      <workItem from="1622278125871" duration="14949000" />
     </task>
     <servers />
   </component>

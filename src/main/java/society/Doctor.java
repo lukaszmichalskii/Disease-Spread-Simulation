@@ -2,6 +2,7 @@ package society;
 
 import static disease.DiseaseSpreader.*;
 import static society.Logic.maxSpeed;
+import static gui.Panel.map;
 
 /**
  * Class Doctor responds to the needs of society to define health status
@@ -21,10 +22,10 @@ public class Doctor {
         int normalTimeDelta = 16;
 
         // conditions of death
-        if (human.getHealthStatus() == 1 && (human.getResistance() <= DISEASE_MORTALITY_INDEX || human.numSick >= 4)){
+        if (human.getHealthStatus() == 1 && (human.getResistance() <= DISEASE_MORTALITY_INDEX || human.numSick >= 3)){
             human.recoveryTime -= fastTimeDelta;
             if (human.recoveryTime <= 0) {
-                human.velocity.reset();
+                map.setVelocity(human, map.getVelocity(human).resetR());
                 human.healthStatus = 3;
                 numInfected--;
 
@@ -48,11 +49,11 @@ public class Doctor {
 
         // conditions for normal people
         else if (human.getHealthStatus() == 1 && human.getResistance() < SAFE_LEVEL_IMMUNITY && human.getResistance() > DISEASE_MORTALITY_INDEX){
-            human.velocity.div(1.001);
+            map.setVelocity(human, map.getVelocity(human).divR(1.001));
             human.recoveryTime -= normalTimeDelta;
             if (human.recoveryTime <= 0){
-                human.velocity.mult(3);
-                human.velocity.limit(maxSpeed);
+                map.setVelocity(human, map.getVelocity(human).multR(3));
+                map.setVelocity(human, map.getVelocity(human).limitR(maxSpeed));
                 human.healthStatus = 2;
                 numInfected--;
 
@@ -69,7 +70,7 @@ public class Doctor {
      * @param human the person on the test
      */
     public static void antibodies(Human human) {
-        human.antibodies = Math.random()*10000;
+        human.antibodies = Math.random();
     }
 
     /**

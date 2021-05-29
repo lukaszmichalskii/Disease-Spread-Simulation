@@ -2,6 +2,8 @@ package society;
 
 import java.awt.*;
 
+import static gui.Panel.map;
+
 
 /**
  * Woman class is subclass of Human and defines an object perceived as a female
@@ -24,6 +26,7 @@ public class Woman extends Human{
     public void paint(Graphics graphics) {
         super.paint(graphics);
 
-        graphics.fillOval((int)position.x, (int)position.y, 8, 8);
+        graphics.fillOval((int) map.getPosition(this).x, (int) map.getPosition(this).y, 8, 8);
+//        graphics.fillOval((int)position.x, (int)position.y, 8, 8);
     }
 }
