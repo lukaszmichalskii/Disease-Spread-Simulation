@@ -34,6 +34,7 @@ public class Map {
      * @return full map
      */
     private java.util.Map<Human, java.util.Map<String, Vector>> mapCreator(int SIZE) {
+     
         if (SIZE > 0) {
             map = new HashMap<>();
             ArrayList<java.util.Map<String, Vector>> attributesStack = new ArrayList<>();

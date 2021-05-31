@@ -14,8 +14,7 @@ import java.util.ArrayList;
 
 import static gui.MenuScreen.chartsOption;
 import static gui.MenuScreen.socialDistancingOption;
-import static gui.Screen.WIN_HEIGHT;
-import static gui.Screen.FRAME_WIDTH;
+import static gui.Screen.*;
 import static society.Doctor.numDead;
 import static society.Doctor.numInfected;
 import static society.Government.POPULATION;
@@ -33,7 +32,7 @@ public class Panel extends JPanel implements ActionListener {
     private final ArrayList<Vector> deathsChart = new ArrayList<>();
 
     private final Timer timer;
-    private final int delay = 12;
+    private final int delay = 10;
     private int time = 0;
 
     /**
@@ -57,8 +56,20 @@ public class Panel extends JPanel implements ActionListener {
     public void paint(Graphics graphics) {
         super.paintComponent(graphics);
 
-        infectionsChart.add(new tools.Vector((double) time/delay, numInfected));
-        deathsChart.add(new tools.Vector((double) time/delay, numDead));
+        if (time/delay > WIN_WIDTH) {
+            int k = time/delay / WIN_WIDTH;
+
+            infectionsChart.remove(0);
+            infectionsChart.add(new tools.Vector((double) time/delay - k*WIN_WIDTH, numInfected));
+
+            deathsChart.remove(0);
+            deathsChart.add(new tools.Vector((double) time/delay - k*WIN_WIDTH, numDead));
+        }
+        else {
+            infectionsChart.add(new tools.Vector((double) time/delay, numInfected));
+            deathsChart.add(new tools.Vector((double) time/delay, numDead));
+        }
+
         time += 10;
 
         for (int i = 0; i < people.size(); i++)
