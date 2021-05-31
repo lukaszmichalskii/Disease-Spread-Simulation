@@ -25,7 +25,7 @@ public class Map {
      * @param SIZE of created map
      */
     public Map(int SIZE) {
-        map = attributesCreator(SIZE);
+        map = mapCreator(SIZE);
     }
 
     /**
@@ -33,7 +33,7 @@ public class Map {
      * @param SIZE of map (society)
      * @return full map
      */
-    private java.util.Map<Human, java.util.Map<String, Vector>> attributesCreator(int SIZE) {
+    private java.util.Map<Human, java.util.Map<String, Vector>> mapCreator(int SIZE) {
         map = new HashMap<>();
         if (SIZE > 0) {
             ArrayList<java.util.Map<String, Vector>> attributesStack = new ArrayList<>();
