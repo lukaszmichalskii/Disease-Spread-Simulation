@@ -18,42 +18,23 @@ public class Map {
 
     private java.util.Map<Human, java.util.Map<String, Vector>> map;
 
-    public Map(){};
+    public Map(){}
 
     /**
-     * Constructor
-     * @param SIZE
+     * Constructor of map
+     * @param SIZE of created map
      */
     public Map(int SIZE) {
-        ArrayList<java.util.Map<String, Vector>> movement = attributesCreator(SIZE);
-        map = mapCreator(movement);
-    }
-
-
-    /**
-     * Create map of human movement attributes
-     * @param attributesStack array of dictionaries with position, velocity and acceleration values
-     * @return complete map / null
-     */
-    private java.util.Map<Human, java.util.Map<String, Vector>> mapCreator(ArrayList<java.util.Map<String, Vector>> attributesStack) {
-        if (attributesStack != null) {
-            map = new HashMap<>();
-            for (int i = 0; i < attributesStack.size(); i++) {
-                map.put(people.get(i), attributesStack.get(i));
-            }
-
-            return map;
-        }
-
-        return null;
+        map = attributesCreator(SIZE);
     }
 
     /**
-     * Create dictionaries, every store unique movement parameters of society objects
-     * @param SIZE number of dictionaries (every human different movement values)
-     * @return array of dictionaries / null
+     * Create map which stores society objects movement param (dictionaries, every store unique movement parameters of society objects)
+     * @param SIZE of map (society)
+     * @return full map
      */
-    private ArrayList<java.util.Map<String, Vector>> attributesCreator(int SIZE) {
+    private java.util.Map<Human, java.util.Map<String, Vector>> attributesCreator(int SIZE) {
+        map = new HashMap<>();
         if (SIZE > 0) {
             ArrayList<java.util.Map<String, Vector>> attributesStack = new ArrayList<>();
             for (int i = 0; i < SIZE; i++) {
@@ -62,9 +43,10 @@ public class Map {
                 attributes.put("velocity", new Vector(Math.random() * (maxSpeed) +- 2, Math.random() * (maxSpeed) +- 2));
                 attributes.put("acceleration", new Vector());
                 attributesStack.add(attributes);
+                map.put(people.get(i), attributesStack.get(i));
             }
 
-            return attributesStack;
+            return map;
         }
 
         return null;

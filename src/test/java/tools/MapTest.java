@@ -21,16 +21,16 @@ public class MapTest {
             ArrayList<java.util.Map<String, Vector>> test2 = (ArrayList<java.util.Map<String, Vector>>) attributesCreator.invoke(map, 0);
             ArrayList<java.util.Map<String, Vector>> test3 = (ArrayList<java.util.Map<String, Vector>>) attributesCreator.invoke(map, 200);
 
-            Assertions.assertNull(test);
-            Assertions.assertNull(test2);
-            Assertions.assertNotNull(test3);
+            Assertions.assertNull(test, "attributesCreator test failed (negative argument was supplied)");
+            Assertions.assertNull(test2, "attributesCreator test failed (create dataset of size 0)");
+            Assertions.assertNotNull(test3, "attributesCreator test failed - return null object");
             for (java.util.Map<String, Vector> stringVectorMap : test3) {
-                Assertions.assertNotNull(stringVectorMap.get("position"));
-                Assertions.assertNotNull(stringVectorMap.get("acceleration"));
-                Assertions.assertNotNull(stringVectorMap.get("velocity"));
+                Assertions.assertNotNull(stringVectorMap.get("position"), "Position vector creation test failed");
+                Assertions.assertNotNull(stringVectorMap.get("acceleration"), "Acceleration vector creation test failed");
+                Assertions.assertNotNull(stringVectorMap.get("velocity"), "Velocity vector creation test failed");
             }
         } catch (Exception e) {
-            Assertions.fail();
+            Assertions.fail("attributesCreator test failed");
         }
 
     }

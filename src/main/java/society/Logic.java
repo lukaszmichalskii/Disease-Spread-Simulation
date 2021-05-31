@@ -3,8 +3,6 @@ package society;
 import tools.Vector;
 
 import static gui.Panel.map;
-
-
 import static gui.Panel.people;
 
 /**
@@ -36,12 +34,9 @@ public class Logic {
             */
             if (humanEntity.healthStatus != 3 && human.healthStatus != 3) {
                 dist = Vector.dist(map.getPosition(human), map.getPosition(humanEntity));
-//                dist = Vector.dist(human.position, humanEntity.position);
                 if (dist < perceptionRadius && human != humanEntity) {
                     Vector diff = new Vector(map.getPosition(human).x, map.getPosition(human).y);
-//                    Vector diff = new Vector(human.position.x, human.position.y);
                     diff.sub(map.getPosition(humanEntity));
-//                    diff.sub(humanEntity.position);
                     diff.div(dist);
                     steering.add(diff);
                     total++;
@@ -63,10 +58,8 @@ public class Logic {
      */
     public static void distanceYourself(Human human) {
         map.setAcceleration(human, new Vector());
-//        human.setAcceleration(new Vector());
         Vector socialDistancing = socialDistancing(human);
         map.setAcceleration(human, socialDistancing);
-//        human.setAcceleration(socialDistancing);
     }
 
     /**
@@ -75,8 +68,6 @@ public class Logic {
      */
     public static void update(Human human) {
         map.setVelocity(human, map.getVelocity(human).addR(map.getAcceleration(human)));
-//        human.velocity.add(human.getAcceleration());
         map.setVelocity(human, map.getVelocity(human).limitR(maxSpeed));
-//        human.velocity.limit(maxSpeed);
     }
 }
