@@ -123,7 +123,7 @@ public abstract class MenuScreen extends JPanel implements ActionListener {
         frame.add(textPeoplePayAttention);
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(420,720);
+        frame.setSize(420,500);
         frame.setLayout(null);
         frame.setVisible(true);
         frame.setResizable(false);
