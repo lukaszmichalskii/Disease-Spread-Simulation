@@ -46,7 +46,7 @@ public abstract class MenuScreen extends JPanel implements ActionListener {
         setDiseaseMortality.setMajorTickSpacing(5);
         setDiseaseMortality.setPaintTicks(true);
         setDiseaseMortality.setMinorTickSpacing(10);
-        textDiseaseMortality.setText("Disease morality: " + setDiseaseMortality.getValue());
+        textDiseaseMortality.setText("Disease mortality: " + setDiseaseMortality.getValue());
         DISEASE_MORTALITY_INDEX = setDiseaseMortality.getValue();
 
         setInitialInfections.setMajorTickSpacing(100);
@@ -61,14 +61,15 @@ public abstract class MenuScreen extends JPanel implements ActionListener {
         textPeoplePayAttention.setText("People social distance on their own: " + setPeoplePayAttention.getValue() + "%");
         peoplePayAttention = (double) setPeoplePayAttention.getValue()/100;
 
-        startBtn.setBounds(30,40,100,40);
-        setPopulation.setBounds(30,100,300,38);
-        textPopulation.setBounds(35,140,300,30);
-        setDiseaseMortality.setBounds(30, 180, 300, 38);
-        textDiseaseMortality.setBounds(35, 220, 300, 30);
-        setInitialInfections.setBounds(30,270,300,38);
-        textInitialInfections.setBounds(35,300,300,30);
-        setPeoplePayAttention.setBounds(30,350,300,38);
+        final int width = 330;
+        startBtn.setBounds(35,40,100,40);
+        setPopulation.setBounds(30,100,width,38);
+        textPopulation.setBounds(35,140,width,30);
+        setDiseaseMortality.setBounds(30, 180, width, 38);
+        textDiseaseMortality.setBounds(35, 220, width, 30);
+        setInitialInfections.setBounds(30,270,width,38);
+        textInitialInfections.setBounds(35,300,width,30);
+        setPeoplePayAttention.setBounds(30,350,width,38);
         textPeoplePayAttention.setBounds(35,380,400,30);
         chartsOption.setBounds( 150,40,100,20);
         socialDistancingOption.setBounds( 150,60,250,20);
@@ -80,7 +81,7 @@ public abstract class MenuScreen extends JPanel implements ActionListener {
         });
 
         setDiseaseMortality.addChangeListener(e -> {
-            textDiseaseMortality.setText("Disease morality: " + setDiseaseMortality.getValue());
+            textDiseaseMortality.setText("Disease mortality: " + setDiseaseMortality.getValue());
             DISEASE_MORTALITY_INDEX = setDiseaseMortality.getValue();
         });
 
