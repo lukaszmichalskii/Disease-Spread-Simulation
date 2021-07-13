@@ -30,8 +30,10 @@ Disease Spread Simulation is made in Java with the help of the Gradle build auto
 
 ### Simulation in action (screenshot)
 
-![SimulationprocessScreen](https://user-images.githubusercontent.com/76202883/125281672-cd6a1800-e316-11eb-8fab-8040ac016c87.png)
+![SimulationprocessScreen](https://user-images.githubusercontent.com/76202883/125428787-c9574056-89e3-46cd-a25e-a1a7528d39ca.png)
 
 ### Configuration screen
 
-![configScreen_70](https://user-images.githubusercontent.com/76202883/125427778-98e99a72-340d-468f-bafc-33dcc9c4b9a6.png)
+![configScreen_70](https://user-images.githubusercontent.com/76202883/125428752-8df088b9-6ad4-452a-9f54-7b3ca96cbb8e.png)
+
+
